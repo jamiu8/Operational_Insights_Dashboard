@@ -1,0 +1,501 @@
+ticket_id,date_raised,date_resolved,department,region,agent_name,customer_name,customer_email,priority,status,response_time_minutes,customer_satisfaction_score,revenue_impact
+872962C5,1/1/2024,1/3/2024,Operations,Asia Pacific,Colleen Simmons,Julian Collins,john74@example.com,Medium,Resolved,3530,2.76,4442.11
+622A6CE2,1/1/2024,,Sales,Middle East,Jeremy Wright,Bradley Gonzales,alexanderlane@example.com,Critical,Unresolved,,,17247.11
+E2239292,1/3/2024,1/3/2024,Sales,Middle East,Eric Howe,Jessica Davis,gbaker@example.net,Critical,Resolved,852,1.64,10103.95
+9C23D4B2,1/3/2024,1/5/2024,Technical Support,Asia Pacific,Jessica Simmons,Chase Watson,igonzalez@example.com,Low,Resolved,3510,1.17,26577.19
+FF2DF0BC,1/4/2024,,Operations,Africa,Jessica Oconnell,Stephen Clark,ecrawford@example.org,Low,Unresolved,,,1368.35
+F9FBDD12,1/5/2024,,Sales,Africa,Dylan Mcguire,Amanda Taylor,lindafitzgerald@example.net,Critical,Unresolved,,,21074.39
+45DACEB9,1/5/2024,,Customer Support,Asia Pacific,Emma Young,Robin Thomas,ahenderson@example.net,Critical,Unresolved,,,29597.91
+781380FF,1/5/2024,,Sales,Asia Pacific,Donna Davis,Lori Wallace,badams@example.org,Medium,Unresolved,,,3059.09
+6C04A39B,1/5/2024,,Technical Support,Africa,Shelley Martin,Michelle Kim,davidlewis@example.com,Low,Unresolved,,,38953.17
+4D84046E,1/5/2024,1/5/2024,Operations,Africa,Christine Bailey,David Gardner,lindsayavery@example.org,Critical,Resolved,1200,3.04,37329.01
+04E77F93,1/6/2024,,Sales,Europe,Jamie Jones,Paul Duncan,mark31@example.net,High,Unresolved,,,42993.83
+E4C01580,1/6/2024,,Operations,Middle East,Thomas Washington,John Moore,johnsonsara@example.org,Medium,Unresolved,,,2462.14
+28160A70,1/7/2024,1/7/2024,Operations,Africa,Mike Salazar,Vernon Gray,carrjohn@example.com,Medium,Resolved,1260,3.59,30023.55
+2F071666,1/7/2024,1/8/2024,Sales,Africa,Alexandria Clark,Scott Cohen,bowersjohn@example.com,High,Resolved,2472,4.3,3569.94
+E381C1CE,1/7/2024,,Billing,Middle East,Christopher Williams,Gregory Garcia,robert67@example.com,Critical,Unresolved,,,15120.74
+D98FA60A,1/7/2024,1/7/2024,Customer Support,North America,Lisa Burch,Kristen Hunt,michael42@example.com,High,Resolved,833,3.5,7022.26
+91039B51,1/7/2024,1/7/2024,Billing,Middle East,Marie Wilson,Robert Wilkins,wrichardson@example.org,High,Resolved,1322,2.33,11511.57
+3125C3C7,1/9/2024,,Sales,Middle East,Joseph Gonzalez,Angie Garcia,josephporter@example.net,High,Unresolved,,,39554.82
+1ACC5856,1/9/2024,1/10/2024,Operations,Middle East,Angela Torres,Courtney Bowman,jsmall@example.org,High,Resolved,2662,1.71,4318.02
+527033D9,1/10/2024,,Customer Support,Asia Pacific,Jennifer Harris,Nicholas Watson,karengarcia@example.net,High,Unresolved,,,31566.13
+1CA4CB17,1/11/2024,1/13/2024,Billing,Middle East,Mr. Jared Rodriguez,William Levine,pattersonwillie@example.org,Low,Resolved,3532,4.59,40860.21
+0467C03E,1/11/2024,1/11/2024,Sales,Africa,Stephanie Mcdaniel,Benjamin Johnson,jonathon37@example.net,Medium,Resolved,643,1.34,45661.45
+9.48E+89,1/13/2024,1/15/2024,Sales,Asia Pacific,Mark Lopez,Kathleen Hall,justinnewman@example.org,Low,Resolved,3308,1.46,22251.74
+8FECBB24,1/13/2024,1/13/2024,Operations,North America,Tim Cruz,Preston Floyd,brandonnorris@example.com,Low,Resolved,106,2.08,23767.37
+DBA7B854,1/15/2024,1/17/2024,Technical Support,Africa,Robert Ellis,Erik Vaughn Jr.,sherry40@example.com,Medium,Resolved,3024,4.88,5772.93
+71F4FDC4,1/15/2024,,Sales,Africa,Veronica Dennis,Andrea Caldwell,rramirez@example.com,Low,Unresolved,,,22286.76
+C70BDF7E,1/16/2024,1/16/2024,Billing,North America,Jerry King,Tim Harrison,howardchristopher@example.net,Critical,Resolved,108,4.5,46898.04
+17E48048,1/16/2024,1/18/2024,Sales,Africa,Carol Luna,David Daniels,laura38@example.com,Low,Resolved,3239,2.63,4489.61
+F51A4FC4,1/17/2024,1/19/2024,Operations,Asia Pacific,Rhonda Knight,Travis Campbell,xmartinez@example.net,Medium,Resolved,3013,3.06,40353.24
+14FAF2DD,1/17/2024,1/18/2024,Billing,Asia Pacific,Anthony Johnson,Abigail Maddox,bradley55@example.net,Low,Resolved,1635,3.35,18147.87
+7EE67DDE,1/17/2024,1/18/2024,Billing,Africa,Kevin Mitchell,Judy Barnett,fryan@example.com,Low,Resolved,2660,4.94,25132.06
+F5E2DE4B,1/18/2024,1/20/2024,Customer Support,Middle East,Madison Webb,Christopher Daugherty,henrylauren@example.org,High,Resolved,3965,3.17,42587.76
+E9C6C0C6,1/19/2024,1/20/2024,Billing,Middle East,Anthony Jones,Susan Miller,johnsonerica@example.com,Low,Resolved,2049,1.55,2977.89
+B09C4BBB,1/19/2024,1/19/2024,Sales,Europe,Julie Franco,Rachel Levine,travisblake@example.net,Medium,Resolved,1079,3.9,49679.21
+C447D02C,1/20/2024,1/20/2024,Technical Support,Asia Pacific,Sharon Taylor,Darrell Lindsey,harperchristina@example.net,Critical,Resolved,1091,3.03,5215.64
+ECAA7A2E,1/21/2024,1/22/2024,Sales,North America,Dylan Anderson,Lisa Reyes,pricedebbie@example.net,High,Resolved,2753,4.46,36213.82
+0A1D034F,1/21/2024,,Technical Support,Middle East,David Wallace,Misty Butler,sheenawhite@example.com,Medium,Unresolved,,,45612.51
+257F49F5,1/23/2024,1/23/2024,Technical Support,Asia Pacific,Kevin Dennis,Amanda Meyer,dfreeman@example.com,High,Resolved,815,2.43,27638.49
+F8CBDF19,1/25/2024,1/27/2024,Sales,Middle East,Paul Wilson,Gary Dunn,jenningsjoseph@example.net,Low,Resolved,4021,1.32,26629.52
+D77C1EFF,1/26/2024,1/28/2024,Technical Support,Europe,Roy Miller,Justin Mccoy,sanderskatie@example.com,Medium,Resolved,4062,1.91,35721.63
+4F2BEFF7,1/26/2024,1/27/2024,Billing,Europe,Jennifer Soto,Ryan Smith,lori89@example.net,High,Resolved,1870,2.82,12241.32
+31FE1574,1/26/2024,1/26/2024,Sales,Middle East,James Martin,Robert Hall,christian51@example.net,High,Resolved,1417,4.27,23139.63
+35BF3B5F,1/26/2024,1/27/2024,Customer Support,Asia Pacific,Kelly Warner,Richard Elliott,judylarsen@example.com,Low,Resolved,1705,4.95,16808.83
+FB4070A8,1/27/2024,1/28/2024,Customer Support,North America,Ashley Chavez,Ralph Trujillo,ronaldhurst@example.com,Medium,Resolved,2578,1.12,18670.89
+F7DD7A76,1/28/2024,1/30/2024,Customer Support,Middle East,Maurice Murphy,Ricky James,lisa00@example.net,High,Resolved,4044,1.98,19155.53
+ADCB8470,1/28/2024,,Billing,Middle East,Kimberly Shaw,Michael Sanders,yjohnson@example.org,High,Unresolved,,,36066.03
+4A570DB1,1/29/2024,1/31/2024,Billing,Middle East,Heather Taylor,Joseph Hickman,bkelly@example.com,Medium,Resolved,3504,3.98,3718.58
+B2110C61,1/29/2024,1/31/2024,Operations,Africa,Charles Harris,Susan Walker,okirk@example.net,Medium,Resolved,3598,2.74,44731.89
+D9B9AC7D,2/1/2024,,Technical Support,Europe,Mark Meyer,Andrew Harris,ugarrett@example.org,Low,Unresolved,,,12470.48
+00F29CC0,2/1/2024,2/1/2024,Sales,North America,Michael Wilson,Jennifer Baldwin,stevenkeller@example.org,Critical,Resolved,998,3.33,19929.56
+88E635A1,2/3/2024,,Customer Support,North America,Mr. Matthew Hanson,Cindy Austin,jessicahobbs@example.org,Medium,Unresolved,,,42929.37
+B76D9674,2/3/2024,2/3/2024,Technical Support,Middle East,Molly Rodriguez,Matthew Adkins,bethanyruiz@example.org,High,Resolved,1116,4.71,17950.34
+440B480B,2/5/2024,2/7/2024,Sales,Asia Pacific,Sarah Hart,Joseph Wilson,ryananderson@example.net,High,Resolved,3199,4.61,43401.67
+3B2CE03E,2/6/2024,,Billing,Africa,Rhonda Gomez,Mark Lewis,xgriffin@example.com,Low,Unresolved,,,15516.63
+95A8D353,2/6/2024,2/7/2024,Operations,Asia Pacific,James Grant,Joel Campos,mramos@example.com,High,Resolved,2650,3.97,7014.4
+D7D65C53,2/7/2024,2/7/2024,Billing,Europe,Joseph Schroeder,Eugene Decker,terrywatson@example.com,Critical,Resolved,367,1.16,752.04
+1F0FFACF,2/9/2024,2/9/2024,Technical Support,North America,Felicia Lopez,Nicholas Hall,aprilwatts@example.org,Medium,Resolved,60,3.56,4132.22
+877D9CAC,2/9/2024,2/10/2024,Operations,Asia Pacific,Sherry Davis,Kayla Perez,richard61@example.org,Low,Resolved,2380,3.48,16767.89
+3AFF46FA,2/10/2024,2/11/2024,Technical Support,Europe,Beverly Thomas,Megan Solis,jmendez@example.com,Medium,Resolved,2765,2.57,107.18
+724C9C71,2/10/2024,2/12/2024,Technical Support,Europe,Vicki Ramos,Veronica Williams,petersdiana@example.org,Low,Resolved,3105,1.53,11485.85
+7F91B370,2/11/2024,2/12/2024,Billing,Asia Pacific,Shane Parker,Jean Hogan,garrisonjohn@example.org,High,Resolved,1779,2.73,33335.52
+EB17E258,2/11/2024,,Sales,Europe,Thomas Mcdonald,Thomas Barnett,hmartinez@example.org,Medium,Unresolved,,,21359.87
+8066D1B3,2/12/2024,2/12/2024,Billing,Africa,Allison Wilson,Caleb Watson,carl42@example.org,High,Resolved,1157,4.44,15885.19
+93CD11D0,2/13/2024,2/15/2024,Operations,North America,Isaiah Jenkins,Erika Mason,ginashah@example.org,High,Resolved,3611,3.79,7022.36
+35069F4C,2/13/2024,2/14/2024,Technical Support,Europe,Ariel Richardson,Brian Schmidt,jessicalloyd@example.org,Low,Resolved,2037,2.99,11815.22
+68DFB2D4,2/14/2024,2/15/2024,Customer Support,Europe,Wanda Nelson,Kevin Bailey,tfernandez@example.net,Low,Resolved,2342,2.7,41025.7
+625F7C73,2/14/2024,,Sales,Middle East,Jeffrey Johnson,James Kelly,brendaperry@example.com,High,Unresolved,,,48049.14
+0B0E1361,2/14/2024,2/16/2024,Operations,Africa,Angela Morris,Melissa Alvarez,gordonallison@example.org,High,Resolved,4171,3.5,16860.05
+859CCCE0,2/16/2024,2/16/2024,Operations,Africa,Robert Brewer,Randy Hall,bethanycox@example.net,High,Resolved,642,3.8,20703.2
+89F40D1E,2/16/2024,2/17/2024,Technical Support,Africa,Christina Berry,Linda Deleon,emilybishop@example.org,Low,Resolved,2058,3.19,35965.75
+E78C45B7,2/16/2024,,Customer Support,Africa,Brad Thornton,Eddie Rivera,claire66@example.com,High,Unresolved,,,3241.6
+08DF68E9,2/19/2024,2/19/2024,Operations,North America,Jennifer Greene,Melinda Rowe,gonzaleschase@example.net,High,Resolved,1310,3.01,16916.78
+1A9CB7C3,2/19/2024,2/20/2024,Technical Support,Europe,Kristin Ware,Chad Green,kylie19@example.com,Critical,Resolved,2095,1.67,21655.62
+6D145742,2/19/2024,2/21/2024,Operations,North America,Seth Hampton,Amy Jefferson,lauren25@example.org,High,Resolved,3152,1.37,25664.12
+9F84AF08,2/21/2024,2/21/2024,Operations,Europe,Cory Conley,Eddie Duran,raymond31@example.com,High,Resolved,786,2.02,45822.11
+314EFB9E,2/21/2024,2/21/2024,Technical Support,Middle East,Teresa Jordan,Randall Anderson,diana31@example.org,Critical,Resolved,807,1.57,20065.97
+E0B72624,2/23/2024,2/24/2024,Operations,Africa,Stephanie Clark,James Myers,jennifer06@example.com,High,Resolved,2555,4.55,17284.06
+B64AD71F,2/23/2024,2/23/2024,Sales,Africa,Lisa Carpenter MD,Samantha Kennedy,asmith@example.net,Critical,Resolved,1056,4.12,27126.9
+700F6716,2/25/2024,,Customer Support,North America,Brian Kennedy,Diana Knight,ssanford@example.net,Medium,Unresolved,,,24878.26
+89B24EF0,2/25/2024,,Customer Support,Africa,Anthony Harris,Noah Atkins,vfitzpatrick@example.net,Low,Unresolved,,,2656.98
+F698511C,2/26/2024,2/26/2024,Technical Support,North America,Brooke Erickson,Tara Nguyen,martha73@example.org,Low,Resolved,684,4.3,19996.59
+9670714A,2/26/2024,2/26/2024,Operations,Europe,Jesse Watkins,Breanna Dennis,obarnett@example.com,High,Resolved,1022,1.45,10841.08
+416179C4,2/27/2024,2/29/2024,Customer Support,Africa,George Thompson,Patricia Stout,qthomas@example.net,High,Resolved,2964,1.23,16978.04
+9620A365,2/27/2024,,Billing,Europe,Mary Smith,Douglas Myers,rlewis@example.net,Critical,Unresolved,,,20919.45
+DF8F6D0D,2/27/2024,,Sales,Middle East,Jerome Miller,Angelica Smith,lrobinson@example.net,Medium,Unresolved,,,48256.05
+57C4E8FD,2/28/2024,3/1/2024,Operations,North America,Caroline Johnson,Vanessa Perez,rsoto@example.com,Low,Resolved,3111,3.54,42872.52
+38EDAFD5,2/28/2024,3/1/2024,Technical Support,Europe,Ann York,Christopher Henry,smithjennifer@example.net,Medium,Resolved,4271,3.54,998.91
+690E6C3D,2/29/2024,,Technical Support,Africa,April Wright,Jack Phillips,nfloyd@example.org,High,Unresolved,,,27414.36
+8739880D,3/2/2024,3/2/2024,Customer Support,Africa,Dana Garza,Dr. Michelle Thompson,cassandra05@example.com,Medium,Resolved,1431,4.23,17729.07
+F75F6AA4,3/4/2024,3/5/2024,Operations,North America,Joshua Williams,Teresa Montgomery,alvarezcrystal@example.org,Critical,Resolved,1676,1.2,1293.61
+F07DDAF3,3/5/2024,,Billing,North America,Amy Maldonado,Shelby Watson,jonsoto@example.org,Low,Unresolved,,,17660.92
+88B3C40F,3/8/2024,,Billing,Europe,Beth Dean,Kathryn Avery,patellindsay@example.com,High,Unresolved,,,225.81
+80287A10,3/9/2024,3/9/2024,Sales,North America,Nathan Clark,Tonya Stephenson,zacharymiranda@example.net,Critical,Resolved,826,1.58,33958.21
+D9218DC5,3/9/2024,3/10/2024,Customer Support,North America,Kathleen Hunt,Lori Sexton,lwu@example.com,Critical,Resolved,2813,3.61,16389.78
+7924601,3/9/2024,,Sales,Europe,Casey Salazar,Donna Compton,jordanrhodes@example.org,High,Unresolved,,,36754.02
+C78D7140,3/10/2024,3/10/2024,Operations,Middle East,Jesus Marks,Jordan Johnson,mayoadrian@example.com,Medium,Resolved,945,1.76,7672.53
+D67284A6,3/11/2024,3/13/2024,Billing,Middle East,Sarah Miller,Gerald Bryant,yolanda87@example.net,High,Resolved,4010,2.88,3487.57
+29FD9B18,3/11/2024,,Customer Support,North America,Sydney Brooks,Philip Tucker,ronnie45@example.org,Critical,Unresolved,,,48773.01
+A6172D2F,3/13/2024,3/13/2024,Sales,North America,Kelly Casey,Tina Walker,colejoseph@example.com,Low,Resolved,730,3.12,30254.11
+BE334F4F,3/13/2024,3/15/2024,Billing,Middle East,Joseph Hernandez,Taylor Ross,lwest@example.org,Medium,Resolved,4188,1.48,15708.9
+F9EEB519,3/15/2024,3/17/2024,Technical Support,Europe,Lucas Fletcher,Paul Anderson,arianachung@example.com,Medium,Resolved,3984,3.64,4818
+2E6D0E8A,3/17/2024,3/19/2024,Operations,Asia Pacific,Logan Weaver,Dawn Lewis,jonesdana@example.net,Medium,Resolved,3195,2.38,15116.78
+ADE2B13F,3/17/2024,3/17/2024,Customer Support,Middle East,Vanessa Jarvis,Lisa Miles,jake58@example.org,Critical,Resolved,246,4.96,34768.87
+F704956C,3/17/2024,3/17/2024,Technical Support,Europe,Juan Gomez,Terri Strong,anthonydunn@example.org,Medium,Resolved,503,3.83,20386.36
+856C64F1,3/19/2024,3/19/2024,Billing,Europe,Daniel Townsend,Thomas West,mendezerica@example.net,Low,Resolved,743,1.06,20115.31
+C56E8FA1,3/20/2024,,Billing,North America,Marie Hodges,Samantha Clarke,jasonarmstrong@example.org,Medium,Unresolved,,,6730.78
+2D506F6A,3/20/2024,3/20/2024,Operations,Middle East,Kayla Ryan,Shane Harris,heather96@example.com,Medium,Resolved,760,1.92,20242.88
+9585CF25,3/20/2024,,Billing,Europe,Beverly Gonzalez,Robert Curtis,sarah44@example.org,High,Unresolved,,,21315.1
+FCA9E94E,3/20/2024,3/22/2024,Technical Support,Europe,Emily Colon,Paula Jones,nmartinez@example.net,Low,Resolved,2965,1.66,34765.85
+A85A7CE8,3/21/2024,,Customer Support,Asia Pacific,Jack Mcconnell,Lindsey Brown,davismario@example.com,High,Unresolved,,,14317.55
+C82D5A9C,3/21/2024,,Sales,Middle East,Michael Herrera,Michael Cook,terrence15@example.com,Critical,Unresolved,,,5100.85
+C41A6B5A,3/22/2024,3/22/2024,Customer Support,North America,Christine Mcdonald,Amy Collins,frogers@example.com,Low,Resolved,626,1.44,1906.79
+A4594205,3/23/2024,3/23/2024,Technical Support,Middle East,Renee Harper,Brenda Gray,emilystrong@example.net,Critical,Resolved,1436,4.52,30106.7
+20A3014F,3/23/2024,,Operations,Africa,Thomas Foster,Kelly Rivas,ramirezbrandi@example.net,Critical,Unresolved,,,15634.53
+B4908D36,3/24/2024,3/25/2024,Customer Support,Middle East,Jennifer Alexander,Shelly Tate,chadcook@example.net,Medium,Resolved,1976,3.68,48275.94
+7B3A4362,3/24/2024,3/26/2024,Sales,North America,Carlos Vance,Christian Skinner,josephcook@example.com,Critical,Resolved,3974,2.06,41863.77
+81602C89,3/25/2024,3/25/2024,Customer Support,North America,Patrick Morris,Matthew White,cynthia25@example.org,Critical,Resolved,509,1.46,10467.35
+C665872A,3/27/2024,,Billing,Middle East,Mark Ingram,Eric Dougherty,thernandez@example.net,Medium,Unresolved,,,16321.38
+6BD0EC80,3/28/2024,3/29/2024,Customer Support,Europe,Rose Macias,Daniel Ingram,abrown@example.com,Low,Resolved,1595,3.17,40833.64
+2F3689DD,3/28/2024,3/28/2024,Operations,Europe,Lauren Roberts,Mathew Ruiz,williamsonmarcia@example.net,High,Resolved,416,4.42,2367.67
+03EBD8E3,3/28/2024,3/30/2024,Sales,Asia Pacific,Elizabeth Jones,Cody Gomez,olsonanthony@example.net,Medium,Resolved,3477,1.86,26835.78
+54F7CB9A,3/28/2024,,Billing,Middle East,Anthony Neal,Sean Scott,hcollins@example.com,Critical,Unresolved,,,35413.3
+55257746,3/29/2024,,Operations,Africa,Christine Brown,Adam Hunter,lindseymarsh@example.net,Low,Unresolved,,,10691.35
+32BA0DD2,3/31/2024,4/2/2024,Customer Support,Africa,Stephanie Gomez,Amanda Taylor,rickydougherty@example.com,Low,Resolved,2910,2.47,38177.75
+CC34002E,4/1/2024,,Sales,Middle East,Michael Pitts,James Perez,mmcbride@example.com,High,Unresolved,,,13991.13
+B6018A0A,4/1/2024,4/3/2024,Sales,Middle East,Whitney Moore,Kevin Jefferson,rachelriley@example.net,Low,Resolved,3915,1.23,32076.16
+F6866A2A,4/1/2024,4/1/2024,Technical Support,Asia Pacific,Lisa Hernandez,Angela Burke,millerdavid@example.net,Low,Resolved,396,1.38,12356.22
+C845303C,4/2/2024,,Technical Support,Africa,Timothy Erickson,Kyle Hill,hernandezrobert@example.org,Critical,Unresolved,,,11839.37
+AB24D895,4/3/2024,4/4/2024,Technical Support,North America,Michelle Smith,Julie Frank,mallory70@example.com,High,Resolved,2751,3.25,20069.12
+4FF394C7,4/3/2024,4/4/2024,Sales,Europe,Hannah Williams,Christopher Wood,matthew14@example.com,Medium,Resolved,2272,1.72,26613.17
+83793DD7,4/3/2024,,Sales,Middle East,Melinda Mcdonald,Stephanie Maldonado,angelacruz@example.net,Low,Unresolved,,,16038.63
+2DA1E922,4/3/2024,,Technical Support,Middle East,Cassandra Bond,Christopher White,ballardkelly@example.net,High,Unresolved,,,14692.48
+CFE45154,4/4/2024,4/6/2024,Customer Support,Middle East,John Hines,Carly Fitzgerald,karina35@example.org,Critical,Resolved,3162,2.13,11181.16
+501CF0BC,4/6/2024,4/7/2024,Customer Support,Middle East,Jessica Howard,Curtis Donaldson,keystephanie@example.net,Low,Resolved,2280,2.34,31365.77
+9CFE91C5,4/6/2024,4/8/2024,Customer Support,Asia Pacific,Kimberly Gray,Jeffery Henry,thomasbryant@example.com,High,Resolved,3192,3.81,11699.15
+AA548B97,4/7/2024,4/8/2024,Billing,Middle East,Tamara Evans,Jackson Morris,kristi89@example.org,Critical,Resolved,2121,3.94,28817.73
+952909FB,4/7/2024,4/9/2024,Operations,Africa,Joshua Zuniga,Brooke Fletcher,kimberly28@example.org,Critical,Resolved,3944,4.88,35008.9
+6FD2908D,4/8/2024,4/9/2024,Operations,Middle East,Donald Rosario,Jamie Mays,jenniferalvarez@example.org,Medium,Resolved,2816,1.25,21470.86
+127CAE73,4/8/2024,4/9/2024,Customer Support,Africa,Angie Rush,Carla Gibbs,hollygarcia@example.net,Low,Resolved,2698,4,45667.77
+C9C0EF34,4/8/2024,4/8/2024,Sales,North America,Samuel Hicks,Kenneth Hutchinson,david24@example.org,Critical,Resolved,607,3.06,10034.25
+165D32A0,4/9/2024,4/10/2024,Sales,North America,Frank Levy,Kayla Davis,yuemily@example.org,Medium,Resolved,1920,4.44,16790.43
+C6AC42CB,4/11/2024,,Sales,Middle East,Ralph Monroe,Kristi Browning,wbrown@example.org,High,Unresolved,,,12622.14
+9CB7769B,4/11/2024,,Operations,Asia Pacific,Mark Cameron,Michael James,smithmichael@example.com,Critical,Unresolved,,,10630.62
+93AD19F6,4/13/2024,4/15/2024,Sales,Middle East,Barry Zamora,Melissa Davila,williamdavis@example.org,High,Resolved,3487,4.38,17609.87
+06CA106E,4/13/2024,4/13/2024,Sales,Africa,Audrey Vincent,Brenda Jones,cynthia50@example.com,Low,Resolved,1081,3.5,14051.05
+79CD0D36,4/14/2024,4/15/2024,Technical Support,Middle East,Kent Austin,Tyler Poole,donnatownsend@example.net,High,Resolved,2871,1.8,40492.81
+2192DCB7,4/14/2024,4/16/2024,Sales,Middle East,Jenny Vargas,Angela Marquez,cameroncorey@example.com,High,Resolved,3492,1.91,3229.58
+723DEB7E,4/16/2024,4/16/2024,Customer Support,Africa,Andrew Cox,Barry Bennett,erivas@example.net,Low,Resolved,499,2.91,37137.58
+0912CEFF,4/18/2024,,Technical Support,Middle East,Troy Sims,Edward Holland,taylorantonio@example.org,Critical,Unresolved,,,16404.23
+D0250D85,4/19/2024,4/19/2024,Operations,Middle East,Matthew Grant,Nicholas Costa,vflores@example.org,High,Resolved,757,4.51,20306.46
+EBF65F34,4/19/2024,4/19/2024,Operations,Europe,Belinda Warren,April Walker,william17@example.com,Low,Resolved,977,1.05,44307.08
+360BE978,4/19/2024,,Operations,Asia Pacific,Justin Black,Victor Scott,wmunoz@example.net,Low,Unresolved,,,29624.37
+81D9A104,4/20/2024,4/21/2024,Sales,Europe,Nicholas Bell,Mckenzie Powers,rthompson@example.org,Critical,Resolved,2656,2.51,10630.65
+1AD97490,4/22/2024,,Technical Support,Asia Pacific,Christopher Jones,Jeffrey Chavez,sarahberg@example.org,Medium,Unresolved,,,26355.15
+07257C62,4/24/2024,4/26/2024,Sales,Middle East,Paul Hart,Hector Armstrong,petersonmelissa@example.net,High,Resolved,4035,4.75,39919.45
+C14FD9DE,4/25/2024,4/25/2024,Billing,Asia Pacific,Mr. Mark Martin,Sandra Howard,carpentercourtney@example.org,Critical,Resolved,458,4.32,36509.97
+579EDF48,4/27/2024,4/27/2024,Customer Support,Africa,Carlos Cook,Jonathan Oneal,rdavis@example.com,High,Resolved,820,4.47,15531.02
+39604144,4/28/2024,4/30/2024,Sales,Africa,Jillian Cook,Linda Sullivan,greenbrent@example.org,Medium,Resolved,4042,2,8554.28
+8BE4D488,4/28/2024,4/28/2024,Customer Support,Europe,Heidi Hall,Laura Jarvis,warematthew@example.org,Medium,Resolved,1336,1.29,13446.44
+42A7AC28,4/29/2024,4/30/2024,Technical Support,Africa,Marissa Rosales,Catherine Smith,rmiller@example.net,Low,Resolved,2162,1.65,42884.7
+8D588FE1,4/30/2024,4/30/2024,Customer Support,Africa,Sandra Cross,Richard Navarro,olivia62@example.net,Low,Resolved,1329,3.32,31443.09
+68C1CD2A,4/30/2024,5/2/2024,Technical Support,Middle East,Amanda Davis,Michael Palmer,kennedytammy@example.com,Low,Resolved,2955,2.88,29333.57
+EAB3DED5,4/30/2024,5/1/2024,Technical Support,North America,Wesley Day,Sean Lopez,jbyrd@example.net,High,Resolved,2452,4.02,46371.77
+3A4CF474,5/1/2024,,Operations,Middle East,Emily Garcia,Brian Leon,russelllaura@example.net,Critical,Unresolved,,,30687.45
+6DA1E6A4,5/1/2024,5/3/2024,Customer Support,North America,Gregory Tucker,Michelle Campbell,lorishaffer@example.net,Medium,Resolved,3306,2.22,39122.79
+DD3D295A,5/2/2024,5/3/2024,Billing,Asia Pacific,Elizabeth Ibarra,John Smith,chad57@example.net,High,Resolved,2255,4.28,11530.36
+C62510A0,5/4/2024,5/4/2024,Operations,Africa,Debra Burton,Joel Reid,wlong@example.org,Low,Resolved,715,1.96,7010.9
+A7A52B5D,5/6/2024,5/7/2024,Customer Support,Middle East,Billy Johnson,Elizabeth Irwin,taylor68@example.com,High,Resolved,2519,3.91,5702.57
+D81FF7A6,5/6/2024,5/7/2024,Technical Support,North America,Crystal Dunn,James Mathis,smithdennis@example.org,High,Resolved,2562,2.55,8633.52
+BF25D036,5/7/2024,,Sales,Europe,Matthew Burke,Renee Middleton,ynavarro@example.net,Critical,Unresolved,,,6912.65
+49F01815,5/7/2024,5/8/2024,Operations,Middle East,Joshua Foley,Harry Liu,john97@example.net,Critical,Resolved,2763,3.18,33867.69
+F566F165,5/7/2024,,Sales,Middle East,Craig Black,Vanessa Dunn,melissaday@example.net,Low,Unresolved,,,32439.53
+6B81A723,5/7/2024,5/8/2024,Sales,North America,Anna Delacruz,Tony Kim,sheltonsydney@example.org,Medium,Resolved,1668,3.28,34752.29
+B8FBD294,5/8/2024,,Sales,Asia Pacific,Jeffrey Golden,Suzanne Boyd,rhondayang@example.com,Low,Unresolved,,,49307.1
+F32D0B9B,5/9/2024,5/9/2024,Billing,Middle East,Sarah Smith,Amy Sims,jennifer33@example.com,Medium,Resolved,606,1.19,26755.41
+94AAB645,5/10/2024,5/11/2024,Sales,Africa,Megan Riley,Christian Mitchell,linda07@example.org,High,Resolved,1538,1.96,28167.21
+AC9522D3,5/10/2024,5/12/2024,Customer Support,Middle East,Richard Payne,Tracy Carrillo,danielle35@example.com,High,Resolved,3203,2.71,31003.91
+F17D2DB1,5/10/2024,5/12/2024,Customer Support,Asia Pacific,Jonathan Bolton,John Simmons,wilkinstimothy@example.org,Low,Resolved,3795,2.55,26682.49
+28C63EF1,5/11/2024,5/12/2024,Billing,Asia Pacific,Joseph Peterson,Colleen Bowen,karen59@example.org,High,Resolved,2617,3.52,2729.76
+C7D242F0,5/11/2024,5/11/2024,Technical Support,North America,Daniel Smith,Anthony Simmons,christine73@example.com,Critical,Resolved,239,1.49,39641.21
+41530202,5/11/2024,5/12/2024,Sales,Europe,Jessica Diaz,Chris Bell,michael00@example.org,High,Resolved,2579,3.34,27781.87
+293F8830,5/12/2024,5/12/2024,Technical Support,North America,Jennifer Williams,Kevin Sanders,rodriguezkevin@example.com,Critical,Resolved,954,3.46,33898.92
+FF21AAF4,5/13/2024,5/13/2024,Operations,Africa,Lisa Pruitt,Marissa Olsen,yparker@example.org,High,Resolved,1080,2.58,45905.15
+659E0A79,5/14/2024,,Customer Support,North America,Sarah Barker,Brett Montgomery,nwilkins@example.net,Low,Unresolved,,,31049.31
+D5669D33,5/14/2024,5/15/2024,Operations,North America,Marilyn Johnson,Charles Perry,tsmith@example.net,Medium,Resolved,1568,3.39,10995.3
+7DD5AD08,5/16/2024,,Technical Support,Middle East,Edward Stewart,Shelby Olson,salazarchristopher@example.net,Medium,Unresolved,,,30213.39
+72C456E3,5/17/2024,5/17/2024,Customer Support,Middle East,Michael Green,Angela Curry,andersonwilliam@example.org,High,Resolved,1319,3.07,25729.56
+3EC48B26,5/17/2024,5/19/2024,Customer Support,Europe,Susan Reynolds,Bryan Sanchez,haynesjeff@example.org,High,Resolved,3758,1.45,24975.12
+250BA20B,5/17/2024,5/19/2024,Technical Support,North America,Rodney Shelton,Jesse Palmer,uhughes@example.com,Low,Resolved,2973,1.08,21866.47
+319C236A,5/18/2024,5/18/2024,Billing,Africa,Lindsey Savage,Samuel Brady,rodriguezdavid@example.net,Critical,Resolved,193,1.55,40304.71
+754C5E2E,5/18/2024,5/20/2024,Operations,Middle East,Derek Williams,Katherine Davenport,jessicaallen@example.org,Critical,Resolved,3616,3.23,36009.6
+B24A8D9B,5/19/2024,,Billing,Europe,Benjamin York,George Jones,qmaldonado@example.org,High,Unresolved,,,14763.95
+71A4D4C6,5/19/2024,5/21/2024,Customer Support,Asia Pacific,Samantha Higgins,Gerald Humphrey,parkeremily@example.org,Low,Resolved,3820,4.23,37387.44
+EF0A18FE,5/19/2024,5/19/2024,Sales,North America,Valerie Frank,Jeffrey Smith,inguyen@example.com,Critical,Resolved,1418,2.22,20014.06
+825568B2,5/20/2024,5/21/2024,Technical Support,Asia Pacific,Frederick Romero,Jason Hill,tcarroll@example.org,Medium,Resolved,2017,1.03,40038.53
+8F31CB69,5/20/2024,5/20/2024,Billing,Middle East,Natasha Phillips,Jamie Ferguson,williamlong@example.com,Low,Resolved,111,1.37,42654.19
+AF45A357,5/20/2024,,Billing,Africa,Diane Hayes,Victoria Peck,igraham@example.org,Critical,Unresolved,,,45703.99
+6D867BC9,5/21/2024,5/23/2024,Customer Support,Asia Pacific,Alexandra Garcia,Benjamin Lucas,harmonbenjamin@example.org,High,Resolved,4236,3.88,8252.61
+21FE5802,5/21/2024,5/21/2024,Sales,Africa,Wesley Henry,Kimberly Williams,charlesschmidt@example.net,Medium,Resolved,354,3.6,36454.87
+84E228A7,5/23/2024,5/24/2024,Technical Support,Asia Pacific,Miguel Smith,Lori Taylor,cynthiaweaver@example.com,High,Resolved,1740,2.69,25094.89
+14785B9E,5/24/2024,,Billing,Europe,Lindsey Perkins,Kaylee Hansen,washingtonmichael@example.net,High,Unresolved,,,27528.89
+67C03B34,5/25/2024,5/27/2024,Operations,North America,Danielle Smith,Amber Bowers,tony28@example.org,Medium,Resolved,2918,2.36,11011.67
+25D2FEB5,5/25/2024,,Sales,Asia Pacific,Jeffrey Martin,Cody Gibbs,etorres@example.com,High,Unresolved,,,39117
+194B9245,5/26/2024,5/27/2024,Sales,Africa,Wendy Bell,Lauren Jones,hollandjennifer@example.org,High,Resolved,2180,1.21,49143.67
+EF8386E1,5/27/2024,5/29/2024,Customer Support,Africa,Jessica Mann,Terri Burns,michael01@example.net,Medium,Resolved,3149,3.71,4044.77
+9BD15B3E,5/27/2024,5/27/2024,Customer Support,North America,Ashley Powell,Michelle Cooper MD,bennettcassandra@example.org,Low,Resolved,1053,2.64,17210.5
+5B03379C,5/29/2024,,Operations,Middle East,Richard Romero,Frank Hicks,phyllispope@example.org,Medium,Unresolved,,,10131.16
+931A0732,5/30/2024,5/30/2024,Sales,Asia Pacific,Brandi Reyes,Carl Huffman,bwilliams@example.org,High,Resolved,845,3.07,9770.66
+BE4F123C,5/30/2024,5/30/2024,Technical Support,Middle East,Mary Mercado,Daniel Shannon,jessicaward@example.org,Medium,Resolved,562,4.02,31716.43
+58BD73A9,5/30/2024,5/30/2024,Billing,Asia Pacific,James Kelley,Kelly White,daniel66@example.com,Low,Resolved,57,1.58,24169
+E0508092,6/5/2024,6/5/2024,Technical Support,Asia Pacific,Nathan Navarro,Michelle Brown,megan49@example.net,High,Resolved,738,1.33,10215.69
+860BC945,6/5/2024,,Operations,North America,Rick Hoover,Todd Chapman,bryan40@example.com,Medium,Unresolved,,,8309.38
+365EE9A5,6/8/2024,,Billing,Africa,Amy Pham,Brittany Young,chapmansusan@example.org,Medium,Unresolved,,,30104.56
+C5563049,6/9/2024,6/9/2024,Customer Support,Europe,Jack Thompson,Kiara Rogers,jared54@example.com,Critical,Resolved,367,3.65,48039.3
+9DD774BC,6/9/2024,6/11/2024,Operations,North America,Dr. Erika Ross,Paul Schmidt,matthewrobinson@example.org,Critical,Resolved,3042,4.22,36410.46
+A1A1C66D,6/10/2024,6/10/2024,Operations,Europe,Amanda Tran,Tracey Russell,anthony06@example.net,Medium,Resolved,1237,2.39,7653.62
+FE506943,6/12/2024,6/12/2024,Billing,Middle East,Michael Goodwin,Christine Freeman,jose62@example.org,High,Resolved,152,3.2,12900.91
+43935318,6/12/2024,,Billing,North America,Michelle Bradley,Danny Walker,sabrinahicks@example.net,Critical,Unresolved,,,7629.25
+8607ACA1,6/12/2024,,Customer Support,Middle East,Deborah Mendoza,Jeffrey Harper,smithbrenda@example.net,High,Unresolved,,,25882.08
+15EF4400,6/14/2024,6/16/2024,Sales,North America,Kathy Maldonado,George Perez,michelleaustin@example.net,High,Resolved,2917,2.52,22995.44
+B061ED9E,6/15/2024,6/16/2024,Operations,Asia Pacific,Julie Moyer,Sean James,bryancoleman@example.com,Medium,Resolved,1839,1.14,24857.92
+F013E157,6/15/2024,6/16/2024,Technical Support,North America,Eric Durham,Martha Deleon,kathrynyates@example.org,Critical,Resolved,1739,4.76,25103.79
+19F99AF7,6/16/2024,6/16/2024,Billing,Asia Pacific,Mark Jensen,Wanda Patton,vincent94@example.com,Critical,Resolved,1096,2.7,18899.3
+42253780,6/16/2024,6/16/2024,Sales,North America,Antonio Guzman,Alyssa Edwards,alyssashea@example.org,Critical,Resolved,379,3.23,29216.83
+0854D2C0,6/16/2024,6/17/2024,Billing,Africa,Gregory Waters,Elizabeth Serrano,cmartin@example.com,Medium,Resolved,1945,2.08,3792.8
+C589E9D0,6/18/2024,6/19/2024,Operations,Asia Pacific,Carly Phillips,Robert Becker,adrianakelley@example.org,Medium,Resolved,2184,1.46,17416.27
+C7E2529C,6/19/2024,6/21/2024,Billing,Africa,Deborah Davis,Nicole Jackson,marybryant@example.com,High,Resolved,3394,1.33,44647.72
+BAC192E0,6/19/2024,6/21/2024,Billing,Europe,Julie Huang,Kimberly Crawford,udavis@example.org,Low,Resolved,3554,3.05,46604.11
+790F369F,6/19/2024,6/20/2024,Sales,Africa,Mary Anderson,Kristen Hayes,dawnbaker@example.net,Critical,Resolved,2220,2.3,25393.79
+0F32A1D5,6/20/2024,,Billing,Africa,Sabrina Thomas,Sarah Martinez,qbaker@example.org,Low,Unresolved,,,8753.34
+FD1DFD83,6/21/2024,6/22/2024,Operations,Middle East,Brooke Garcia,Shawn Taylor,qbridges@example.org,Medium,Resolved,1785,3.76,21076.84
+C3836E55,6/22/2024,6/24/2024,Billing,Europe,Julian Castaneda,Brenda Medina,yharmon@example.net,Medium,Resolved,2963,3.99,4731.45
+E7988548,6/22/2024,6/23/2024,Operations,Middle East,Renee Snow,Kathleen Daugherty,stephaniemorris@example.net,Critical,Resolved,2599,1.44,23540.19
+09CBBC5D,6/22/2024,,Technical Support,Africa,Jennifer Snyder,Katherine Jacobs,michaelthompson@example.com,Critical,Unresolved,,,14698.86
+DD117B1C,6/23/2024,6/23/2024,Customer Support,Middle East,Christopher Maldonado,Jessica Donaldson,apalmer@example.com,Critical,Resolved,543,2.14,19920.88
+EC236C41,6/24/2024,6/24/2024,Customer Support,Africa,Adam Anderson,Ashley Sanchez,rebecca38@example.com,Medium,Resolved,643,2.88,14969.12
+51393DD8,6/25/2024,6/25/2024,Sales,Africa,Ann Daniels,Jake Green,phillipsalexandria@example.net,Medium,Resolved,688,2.13,32186.61
+D9C3995E,6/26/2024,6/26/2024,Billing,North America,Mary Whitehead,Joel Wiggins,rachel16@example.org,Critical,Resolved,1401,1.41,10714.96
+EC2395F9,6/27/2024,6/28/2024,Customer Support,Middle East,Sabrina Smith,Brett Davidson,evan89@example.net,Low,Resolved,2199,1.94,46950.59
+2CEA284F,6/29/2024,6/29/2024,Sales,Europe,Elizabeth Greer,Richard Baker,joelsloan@example.com,Low,Resolved,1118,2.43,20442.3
+2CD9AD37,7/1/2024,7/3/2024,Customer Support,Africa,Miranda Morris,Thomas Meyer,thardy@example.net,Low,Resolved,2980,1.75,29266
+8F90946A,7/4/2024,7/4/2024,Technical Support,Asia Pacific,Arthur Griffin,James Smith,smorris@example.org,Low,Resolved,517,4.94,10469.62
+6F4FD023,7/4/2024,7/4/2024,Operations,Europe,Michael Walker,Megan Lucas,schultzjennifer@example.com,High,Resolved,586,4.73,3388.69
+544B21C9,7/5/2024,7/6/2024,Technical Support,North America,Kevin Goodman,Matthew Santiago,zdunn@example.org,High,Resolved,2567,1.15,41496.87
+D60AD14C,7/6/2024,,Billing,Middle East,Amanda Wilson,Kathy Adams,julie04@example.org,Medium,Unresolved,,,48227.48
+305F3344,7/6/2024,,Technical Support,Europe,Jennifer Bowen,Lance Ramos,darrylalvarado@example.org,High,Unresolved,,,39429.79
+C772F63C,7/7/2024,,Operations,North America,James Miles,Paul Rodriguez,shannonpatel@example.net,Low,Unresolved,,,16460.3
+2FD92DD7,7/8/2024,7/9/2024,Billing,Middle East,Dr. Christopher Gill Jr.,Ryan Irwin,jackbowman@example.net,Medium,Resolved,2712,3.1,40290.56
+8BDEFFD6,7/9/2024,7/11/2024,Customer Support,Europe,Tammy Lynch,Madeline Zimmerman,ufields@example.net,Critical,Resolved,3764,4.98,29651.96
+C48C932F,7/9/2024,7/10/2024,Sales,Middle East,Teresa Anderson,Brandon Haley,ymarshall@example.com,High,Resolved,1821,2.91,34841.6
+5162D4DC,7/9/2024,7/9/2024,Billing,Asia Pacific,Ryan Erickson,Mercedes Chavez,stephanie32@example.org,Medium,Resolved,1074,2.89,19765.22
+6F74ADF4,7/9/2024,7/9/2024,Customer Support,North America,Christopher Solomon,Kimberly Young,vdavenport@example.net,Low,Resolved,428,1.38,43960.93
+DDF7E770,7/10/2024,7/12/2024,Sales,Middle East,Sarah Burns,Brittany Richardson,vasquezheather@example.net,Low,Resolved,4240,1.63,32569.3
+722052B4,7/10/2024,7/10/2024,Billing,North America,Randy Smith,Patrick Sanchez,natalie43@example.net,Medium,Resolved,1028,1.6,3046.08
+69CD40CB,7/10/2024,7/11/2024,Technical Support,Europe,Michelle Zimmerman,Peggy Barton,hsmith@example.com,Medium,Resolved,2365,3.27,14693.7
+A74BA005,7/11/2024,7/11/2024,Operations,North America,Amanda Collins,Nicole Mccann,youngcheryl@example.net,Medium,Resolved,1075,3.75,29959.53
+0E6452BB,7/11/2024,7/12/2024,Customer Support,Europe,Gary Houston,David Todd,john77@example.org,Low,Resolved,1896,3.66,14141.28
+2912F740,7/13/2024,,Operations,Europe,Kelly Cochran,Ryan Jones,james78@example.com,Critical,Unresolved,,,15607.07
+A6F320CA,7/14/2024,7/15/2024,Technical Support,Middle East,Gary Armstrong,Robert Taylor,david26@example.net,Low,Resolved,1783,1.24,39757.88
+1FDC8D28,7/15/2024,7/16/2024,Customer Support,Europe,Kirk Beasley,Benjamin Grant,meganperez@example.com,Low,Resolved,2272,1.66,31116.8
+2B417811,7/15/2024,7/15/2024,Sales,Asia Pacific,Evelyn Stephens,Terry Mitchell,marisacase@example.com,High,Resolved,1179,3.76,28392.73
+5744C898,7/18/2024,7/20/2024,Technical Support,Middle East,Vincent Banks MD,Brandy Vega,vgonzalez@example.com,High,Resolved,3244,4.47,36909.8
+F76CB38F,7/19/2024,7/19/2024,Technical Support,Africa,Ronald Mccormick,Amanda Taylor,daniel64@example.com,High,Resolved,751,3,32653.06
+182685A3,7/19/2024,7/20/2024,Technical Support,Europe,Rebecca Wallace,Stacey Wood,pstone@example.org,Low,Resolved,1831,3.88,13423.66
+B7BF1652,7/20/2024,7/22/2024,Operations,Middle East,Jillian Neal,Morgan Coleman,zhill@example.com,High,Resolved,3195,1.41,9230.11
+5FA5B424,7/22/2024,7/22/2024,Technical Support,Europe,Emily Brown,Hannah Taylor,washingtoncurtis@example.com,Low,Resolved,544,4.68,47548.03
+1DC7F2AF,7/23/2024,,Customer Support,North America,Kyle Rivera,Cole Graham,thomas79@example.com,Low,Unresolved,,,11996.32
+9769420E,7/24/2024,7/24/2024,Sales,North America,Leslie Welch,Destiny Rogers,mark82@example.net,Low,Resolved,231,4.24,1161.75
+6C0CB764,7/25/2024,,Customer Support,Europe,Amy Myers,Jessica Singh,judithramirez@example.com,High,Unresolved,,,37751.95
+A58FB809,7/25/2024,7/26/2024,Customer Support,North America,Adam Bradley,Cathy Brown,cindy71@example.com,Low,Resolved,2501,3.6,32523.31
+C1314275,7/25/2024,7/26/2024,Billing,Europe,Suzanne Walsh,Michelle Moon,oscarkelly@example.com,Medium,Resolved,1701,1.47,3667.66
+6588A29E,7/25/2024,,Customer Support,Europe,Lee Cook,Andrea Jackson,kbradford@example.org,Medium,Unresolved,,,27824.29
+2675B13D,7/27/2024,7/29/2024,Operations,Asia Pacific,Jennifer Brown,Crystal Ferguson,vcarpenter@example.org,Medium,Resolved,3464,2.03,34592.61
+8016CC59,7/28/2024,7/29/2024,Customer Support,Middle East,Nicholas James,Oscar Watson,cohenangela@example.net,Low,Resolved,2117,2.54,32108.41
+6C944649,7/28/2024,,Operations,Africa,Tina Savage,Jason Gray,thomas85@example.net,Medium,Unresolved,,,3675.83
+428F74A9,7/31/2024,8/2/2024,Customer Support,Middle East,Joann Marshall,Kevin Chan,dmaldonado@example.com,High,Resolved,3271,2.74,17812.47
+7.93E+12,7/31/2024,,Operations,Middle East,Rebecca Gutierrez,Sarah Spence,bradleywelch@example.com,Critical,Unresolved,,,35071.85
+4D3E5C47,8/2/2024,8/4/2024,Technical Support,North America,John Hunter,Matthew Khan,phamalan@example.org,Low,Resolved,3093,3.68,4562.08
+EC643DDA,8/2/2024,,Billing,Asia Pacific,Rachel Flores,Jessica English,jeremyeaton@example.org,Medium,Unresolved,,,17775.02
+897C85F3,8/3/2024,8/5/2024,Technical Support,North America,Michael Ramirez,Catherine Foster,hzavala@example.com,Low,Resolved,3056,2.8,21022.79
+8397425F,8/3/2024,8/4/2024,Sales,Africa,Ryan Richardson,Matthew Jones,brittanystewart@example.net,High,Resolved,1870,2.86,31390.49
+4FA23FA1,8/4/2024,,Sales,Europe,Adam Chase,Laurie Romero,ryan23@example.org,High,Unresolved,,,19999.39
+265ABEAC,8/4/2024,8/5/2024,Technical Support,Europe,Jeff Frederick,Amanda Brown,christopher02@example.com,Critical,Resolved,1949,3.46,46478.52
+AF69FC3A,8/5/2024,8/6/2024,Technical Support,Africa,Ethan Murphy,Erik Butler,isimon@example.net,Medium,Resolved,1955,2.15,4705.69
+41E79B71,8/6/2024,,Operations,Africa,Patricia Warren,Jessica Hood,john84@example.org,Critical,Unresolved,,,46454.05
+D20E9B4A,8/7/2024,8/9/2024,Operations,North America,James Reese,Matthew Black,odomwilliam@example.com,Low,Resolved,2883,1.33,18693.67
+DE00B841,8/8/2024,8/8/2024,Technical Support,Europe,Christina Potts,Timothy Taylor,longscott@example.com,High,Resolved,375,2.64,11949.11
+2CE775D7,8/9/2024,8/11/2024,Customer Support,Middle East,Kelly Reed,Christopher Murphy,carla76@example.org,Medium,Resolved,3511,4.67,34504.85
+D70432D5,8/10/2024,,Billing,Asia Pacific,Marcus Williams,Christopher Carney,mwilcox@example.org,High,Unresolved,,,33074.68
+BFDC8EEE,8/10/2024,,Sales,North America,Robert Miller,Wesley Peters,tinarussell@example.com,Critical,Unresolved,,,11123.43
+4B5B0DD3,8/12/2024,,Customer Support,Middle East,Christina Gibson,Jonathan Woods,herickson@example.org,Low,Unresolved,,,17294.32
+6F4EA1C7,8/13/2024,8/15/2024,Operations,Europe,Darren Marshall,Scott Sanders,mary63@example.org,Medium,Resolved,3117,2.54,19641.82
+B8D60763,8/13/2024,,Sales,Africa,Shelia Strong,James Frank,kevinandrews@example.com,Critical,Unresolved,,,37222.54
+B4A05BA2,8/13/2024,8/14/2024,Sales,North America,Theresa Thomas,Brittney Santos,ugutierrez@example.org,Low,Resolved,1539,4.16,30778.18
+7DFAB502,8/13/2024,8/15/2024,Technical Support,Middle East,Kevin Lucas,Sandra Moran,srobinson@example.net,Medium,Resolved,4160,3.41,7197.01
+CFE7334C,8/15/2024,8/16/2024,Technical Support,North America,Roger House,Tracy Taylor DDS,cherrythomas@example.net,High,Resolved,1958,2.36,536.82
+7C875E07,8/15/2024,8/15/2024,Operations,Europe,Thomas Johnson,Melanie Walker,julie84@example.net,Medium,Resolved,811,1.14,20546.49
+B57C1A52,8/15/2024,,Billing,Africa,Alexis Cooley,Carly Mathews,torresphilip@example.org,High,Unresolved,,,49164.89
+F9A02B47,8/16/2024,8/16/2024,Sales,Asia Pacific,Monica Burns,Dr. Angela Phillips MD,emccormick@example.org,Low,Resolved,823,3.33,39204.25
+A9AEED57,8/16/2024,8/17/2024,Technical Support,North America,Valerie Esparza,Clayton Edwards,crystal93@example.com,High,Resolved,1874,2.37,3110.05
+F0E2DD0B,8/17/2024,8/18/2024,Billing,Europe,Brandon Campbell,Debbie Young,sanfordsamuel@example.net,Medium,Resolved,2289,2.31,23415.4
+C204B33F,8/18/2024,8/19/2024,Customer Support,Middle East,Julie Fowler,Anthony Sherman,arusso@example.org,Medium,Resolved,2030,2.25,24184.55
+73D3375E,8/19/2024,8/19/2024,Operations,Asia Pacific,Stephanie Lewis,Katherine Garcia,susanevans@example.net,Critical,Resolved,227,4,33337.23
+EDEFD7ED,8/21/2024,8/23/2024,Technical Support,North America,Adam Deleon,Kristine Taylor,rdavis@example.com,Critical,Resolved,3345,3.76,32953.1
+11A10ECD,8/23/2024,,Sales,Africa,Richard Stone,Hailey Green,mark79@example.net,Critical,Unresolved,,,30651.61
+269D7812,8/24/2024,8/24/2024,Operations,North America,Tara Johnson,Douglas James,emills@example.net,Critical,Resolved,632,1.05,2103.22
+85D23390,8/24/2024,8/26/2024,Billing,Africa,Sarah Lopez,Terri Jacobs,sherry58@example.net,Low,Resolved,3953,1.44,30782.26
+962FB904,8/25/2024,8/27/2024,Technical Support,Asia Pacific,Alyssa Spencer,Jenna Hill,rmeza@example.net,Low,Resolved,4068,3.72,2809.85
+0DAFEACF,8/26/2024,8/26/2024,Customer Support,Middle East,Brian Campos,Jeffery Contreras,walshjennifer@example.net,Low,Resolved,63,2.32,13619.48
+9D879BF2,8/27/2024,8/27/2024,Operations,North America,David Rocha,Jill Houston,mary30@example.org,High,Resolved,1098,2.87,1232.44
+3F9CBAEE,8/27/2024,8/27/2024,Technical Support,Middle East,Frank Oneal,Joseph Sandoval Jr.,calderonemma@example.net,Critical,Resolved,380,4.22,31630.38
+CB9D3035,8/28/2024,,Billing,North America,Richard Ray,Sharon Frederick,fbrown@example.net,High,Unresolved,,,11039.86
+CA7A1CB3,8/28/2024,8/30/2024,Operations,North America,Dale Young,Amanda Clark,julian95@example.org,Low,Resolved,3375,1.53,10291.97
+21854693,8/29/2024,,Billing,Middle East,Amanda Schmidt,Patricia Sloan,espinozarebecca@example.org,Low,Unresolved,,,48230.08
+B6CDC716,8/30/2024,,Operations,North America,Steven Hale,Richard Lewis,watsoncody@example.com,Low,Unresolved,,,35164.91
+29F9A2E5,8/30/2024,8/30/2024,Billing,Africa,Brent Hall,Tamara Smith,ywatson@example.org,High,Resolved,786,1.32,30193.69
+0A930627,9/1/2024,9/2/2024,Billing,Africa,Denise Lin,Sarah Smith,brian53@example.net,Critical,Resolved,1567,4.25,32110.75
+79EB7D24,9/1/2024,9/2/2024,Sales,Asia Pacific,Priscilla Mcdaniel,Tristan Thomas,loriblack@example.net,High,Resolved,2428,4.29,46506.96
+8.74E+13,9/2/2024,9/2/2024,Technical Support,Asia Pacific,John Bolton,Susan Moore,russelljulie@example.org,Critical,Resolved,1197,1.75,34696.11
+7A515799,9/2/2024,,Operations,Middle East,Rebecca Morales,Shirley Wright,wrightphyllis@example.com,Critical,Unresolved,,,25695.57
+D9971AB5,9/2/2024,9/4/2024,Technical Support,Europe,Michelle Li,Stacey Glover,rebeccashelton@example.com,High,Resolved,3190,1.93,7563.65
+6323C72F,9/3/2024,9/5/2024,Customer Support,Middle East,Julie Yang,Troy Morgan,whall@example.com,Low,Resolved,3919,3.77,45044.75
+8192255,9/3/2024,9/3/2024,Technical Support,Asia Pacific,Jacob Allen,Trevor Miller,lynnstanley@example.com,Critical,Resolved,1181,2.82,12287.26
+EF8ACFCE,9/3/2024,9/3/2024,Customer Support,North America,Kristine Wright,Carla Preston,anthony84@example.com,High,Resolved,590,3.26,33624.24
+A7C2AE31,9/3/2024,9/5/2024,Technical Support,Middle East,Elizabeth Martinez,Stephanie Rodriguez,patrick22@example.com,Medium,Resolved,3453,4.42,46522.93
+F25C6BCE,9/4/2024,9/4/2024,Technical Support,Africa,Joshua Lee,Christina Schmitt,jessica36@example.com,Medium,Resolved,1372,1.03,32594.9
+CEF8EE92,9/5/2024,9/7/2024,Sales,Africa,Joshua Wagner,Mark Lewis,williamseric@example.com,High,Resolved,3813,4.59,24503.34
+7A58D909,9/5/2024,9/5/2024,Customer Support,Asia Pacific,Erika Baker,Nathan Schmidt DVM,chad66@example.org,Low,Resolved,682,3.67,36383.76
+FCF54E45,9/6/2024,,Billing,Africa,Robert Carlson,Christopher Dunn,frodriguez@example.net,Low,Unresolved,,,41738.58
+D707E8EB,9/6/2024,9/8/2024,Customer Support,North America,Amanda Scott,William Gallegos,thomas77@example.net,High,Resolved,4226,4.07,10931.14
+E99F1F3D,9/6/2024,9/6/2024,Technical Support,Europe,David Montes,Kristin Brooks,jeremymorris@example.com,Low,Resolved,1309,2.88,6143.28
+D772C809,9/6/2024,9/8/2024,Technical Support,Africa,Jodi Andrade,Matthew Pacheco,maria75@example.org,Low,Resolved,3520,2.28,26210.86
+6BA09767,9/7/2024,,Billing,North America,Jennifer Fitzgerald,Melinda Andrews,theodoresnyder@example.org,Medium,Unresolved,,,44758.03
+1C3D9B53,9/8/2024,9/8/2024,Customer Support,Africa,Kevin Evans,Jill Ferguson,ubrady@example.com,Critical,Resolved,760,4.33,42884.29
+F18649C7,9/8/2024,9/9/2024,Billing,North America,Sandra Anderson,Lisa Johnson,eward@example.org,Critical,Resolved,2268,3.23,21094.29
+2F4C35ED,9/9/2024,9/10/2024,Sales,Asia Pacific,William Simon,Jonathan Villanueva,carol24@example.net,Low,Resolved,2228,3.08,37453.14
+35F23118,9/9/2024,9/10/2024,Billing,Europe,Christina Allen,James Perkins DDS,mauricejones@example.org,Medium,Resolved,2863,3.7,11506.84
+85D7A79C,9/9/2024,9/11/2024,Operations,Europe,Dawn Hogan,Kelly Serrano,daniel29@example.org,Medium,Resolved,3495,2.69,22381.69
+078638FD,9/10/2024,,Customer Support,Middle East,Laurie Morgan,Stacy Lucas,paullee@example.net,Low,Unresolved,,,32326.56
+2BB917AD,9/10/2024,9/10/2024,Billing,North America,Kimberly Moore,Susan Romero,yrogers@example.com,Low,Resolved,954,3.95,21193.98
+A592CB39,9/11/2024,,Billing,Middle East,Paul Mcclure DVM,Andrew Mack,gonzalesphillip@example.com,High,Unresolved,,,42055.5
+ED220ADE,9/11/2024,9/11/2024,Operations,Africa,Kelly Shields,Sarah Torres,ecoleman@example.net,Critical,Resolved,725,2.69,9325.64
+4E65F856,9/11/2024,9/12/2024,Sales,Asia Pacific,Derrick Martinez,Cynthia Sanders,wilsonmarilyn@example.org,High,Resolved,1849,2.7,11590.24
+19FDDCF4,9/11/2024,9/12/2024,Technical Support,Africa,Tristan Gill,Nancy Francis,jeffreylove@example.net,Low,Resolved,1543,1.4,9636.63
+E6A3814D,9/12/2024,9/14/2024,Customer Support,Middle East,Karen Bonilla,Christopher Brown,lydia65@example.com,Medium,Resolved,3800,3.97,25808.91
+EA42CDE2,9/13/2024,,Operations,Asia Pacific,Patrick Diaz,Johnny Pearson,shannonwilliams@example.com,Critical,Unresolved,,,7450.69
+4AAA5109,9/13/2024,9/15/2024,Operations,Middle East,Bailey Frey,Stephanie Taylor,joshuagoodwin@example.com,Critical,Resolved,3319,2.37,394.99
+EE803956,9/14/2024,9/14/2024,Customer Support,Africa,Diana Anderson,Mary Young,ocox@example.net,Medium,Resolved,1385,3.77,18431.62
+400F6633,9/15/2024,,Operations,Asia Pacific,Stephen Bates,Jordan Fisher,victoriamclaughlin@example.org,Medium,Unresolved,,,592.22
+EE3320B2,9/17/2024,,Billing,Asia Pacific,Karla Meza,William Brown,cummingsamy@example.org,High,Unresolved,,,7762.41
+66F77839,9/19/2024,9/21/2024,Customer Support,Africa,Chad Martinez,Mitchell Thornton,cbrock@example.net,Low,Resolved,3879,3.66,10833.92
+198C2DA5,9/20/2024,9/20/2024,Operations,Europe,Gary Mcpherson,Colleen Stone,davesmith@example.com,High,Resolved,1307,3.6,13519.5
+B3E3CE73,9/20/2024,9/22/2024,Sales,Asia Pacific,William Mcclure,Jason Coleman,keithjackson@example.org,High,Resolved,3169,1.62,9564.18
+3350DDC7,9/21/2024,,Customer Support,Asia Pacific,Michael Hall,Daniel Barnes,robertmclaughlin@example.net,Critical,Unresolved,,,3574.72
+CDF640C4,9/21/2024,9/21/2024,Billing,North America,Natalie Johns,Maria Mejia,anthonyalexander@example.org,Critical,Resolved,448,2.87,25307.52
+91FD1E18,9/21/2024,9/23/2024,Technical Support,Middle East,Melanie Hoover,Katie Owens,tammymiller@example.net,High,Resolved,3365,1.69,25062.49
+35285151,9/21/2024,9/22/2024,Billing,Europe,James Spence,Christopher Boyd,jennifer75@example.net,High,Resolved,2612,2.83,21154.57
+9453CDD3,9/22/2024,9/23/2024,Sales,North America,Katie Goodman,Erica Graves,washingtonregina@example.net,Critical,Resolved,1917,4.43,45258.23
+D2F75EFC,9/24/2024,9/25/2024,Operations,Asia Pacific,Michael Martin,Dana Jimenez,emaynard@example.net,High,Resolved,1727,4.55,38498.38
+17719D15,9/24/2024,,Sales,Asia Pacific,Anne Palmer,Elizabeth Davis,wvega@example.com,Medium,Unresolved,,,41405.78
+2D06A7DB,9/24/2024,,Billing,Middle East,Sydney Contreras,Robert Padilla,perrycaroline@example.org,Low,Unresolved,,,27150.12
+E9534C4E,9/26/2024,,Operations,Europe,Kelly Sullivan,Christine Austin,ryanmurphy@example.org,High,Unresolved,,,18816.04
+0A290294,9/27/2024,9/28/2024,Sales,Africa,Lacey Brown,Erin Liu,nduffy@example.net,High,Resolved,2030,3.22,13410.92
+AC641945,9/27/2024,9/28/2024,Billing,Asia Pacific,Daniel Mayer,Jessica Oliver,lmiller@example.net,Low,Resolved,1873,3.37,46673.51
+24F3A0FA,9/27/2024,,Operations,Africa,Savannah Hart,Robert Nguyen,grimessusan@example.net,Low,Unresolved,,,13957.34
+2675798,9/29/2024,,Sales,North America,Lindsey Robinson,Christine Walker,matthew64@example.net,Low,Unresolved,,,38530.41
+2CDA8CDA,9/29/2024,9/30/2024,Technical Support,Asia Pacific,Gabriel Herrera,Jason Davis,hensleysusan@example.org,High,Resolved,1503,4.89,29142.89
+C950EC37,9/30/2024,9/30/2024,Technical Support,Africa,Justin Fox,Kristin Leblanc,elizabethreyes@example.com,Low,Resolved,1379,2.72,43246.23
+9F3A23F3,10/1/2024,,Billing,North America,Brenda Moyer,Tara Savage,bonniefrazier@example.net,Critical,Unresolved,,,31012.9
+659A4041,10/2/2024,10/2/2024,Billing,Africa,Cameron Guerra,Mrs. Lisa Reid,doris78@example.org,Medium,Resolved,404,4.8,41584.8
+5A169BF0,10/2/2024,10/3/2024,Technical Support,Middle East,Evan Davis,Nathan Simpson,david37@example.com,Medium,Resolved,2555,1.89,26368.46
+594E21E3,10/2/2024,10/4/2024,Sales,Asia Pacific,Jacqueline Gay,Tony Parker,kelly79@example.org,Medium,Resolved,3791,3.06,35298.01
+BBF0742A,10/4/2024,10/6/2024,Billing,Europe,Heather Smith,Melissa Perez,teresa73@example.net,High,Resolved,3288,4.48,32033.1
+F0CD26AD,10/5/2024,,Billing,Asia Pacific,Jordan Miller,Emily Luna,zirwin@example.com,Low,Unresolved,,,43450.43
+5F1C4F3F,10/6/2024,10/8/2024,Operations,North America,Kimberly Collier,Jordan Grimes,laurie23@example.net,Critical,Resolved,3431,2.56,158.02
+B01B8BEB,10/7/2024,10/7/2024,Customer Support,Middle East,Megan Green,Renee Carlson,larryforbes@example.org,High,Resolved,812,2.26,37293.9
+22171A36,10/8/2024,10/10/2024,Customer Support,Middle East,Destiny Bennett,Elizabeth Myers,gary20@example.org,High,Resolved,4171,3.21,2889.81
+2DC7E920,10/9/2024,10/9/2024,Technical Support,Africa,Paul Kennedy,Steven Long,forbesjeff@example.com,Critical,Resolved,1071,4.82,33889.06
+97E45EE1,10/10/2024,10/12/2024,Billing,Africa,Mr. Travis Burgess,Ian Peterson MD,jgonzales@example.org,Medium,Resolved,2978,1.85,49398.9
+CEF17081,10/10/2024,10/11/2024,Sales,Europe,Jessica Tran,Suzanne Chung,aaronallen@example.net,Critical,Resolved,2335,3.06,35666.42
+5674D283,10/12/2024,10/13/2024,Technical Support,Middle East,Courtney Maldonado,Debra Graham,henrywilliam@example.net,Low,Resolved,2686,3.78,39903.46
+AFD81D32,10/13/2024,10/13/2024,Sales,Asia Pacific,Karina Larson,David Harris,ortizsharon@example.net,Critical,Resolved,1026,3.93,43760
+1E0FD4D9,10/13/2024,10/15/2024,Sales,North America,Dawn Young,Casey Owens,davidwilliams@example.net,Medium,Resolved,4113,3.63,13579.22
+3B812800,10/13/2024,,Technical Support,North America,Debra Harris,Adam Moore,jenniferwebb@example.org,High,Unresolved,,,1646.24
+D0C8A69D,10/13/2024,10/13/2024,Operations,North America,Elizabeth Crawford,Lisa Hines,julielawson@example.net,High,Resolved,1433,3.35,10063.77
+6D514C60,10/14/2024,10/16/2024,Technical Support,Asia Pacific,Craig Murphy,Jose Kaufman,owenmadison@example.org,Critical,Resolved,3078,4.08,27767.79
+214EA526,10/14/2024,10/16/2024,Customer Support,Asia Pacific,Luis Phillips,Brian Rodriguez,theresathompson@example.net,Medium,Resolved,4001,3.56,10905.63
+A3690EAA,10/14/2024,10/14/2024,Sales,North America,Pamela Armstrong,Kyle Harvey,antonioneal@example.org,Medium,Resolved,873,3.93,10986.12
+16676A0F,10/15/2024,10/17/2024,Billing,Africa,Elizabeth Mayer,Billy Mendez,rebeccakeller@example.com,Low,Resolved,2936,1.48,33222.26
+499EDEFB,10/17/2024,10/17/2024,Sales,Europe,Sarah Madden,Brian Johnson,jesushardy@example.com,High,Resolved,312,1.94,23556.35
+038AAEFA,10/17/2024,10/18/2024,Customer Support,Asia Pacific,Rachel Ramos,Catherine Steele,lewisnichole@example.net,Critical,Resolved,2598,2.75,14279.97
+C8D6C98A,10/19/2024,,Sales,Asia Pacific,Victoria Young,Timothy Davenport,mramirez@example.net,Critical,Unresolved,,,7747.64
+233A3F73,10/20/2024,10/21/2024,Operations,Asia Pacific,Evan Coleman,Tiffany Morgan,mcleandavid@example.com,High,Resolved,2855,3.32,6950.54
+41476921,10/20/2024,10/22/2024,Customer Support,North America,Joanne Mathis,James Sanchez,batesnicholas@example.org,Medium,Resolved,3644,3.36,47117.05
+C02AADBA,10/21/2024,10/21/2024,Billing,Middle East,Natasha Bonilla,Andrew Marks,jeremiah91@example.com,High,Resolved,888,4.64,19306.36
+D8383D4A,10/22/2024,10/24/2024,Billing,Asia Pacific,Debra Whitehead,Samantha Stevenson,schultzjanet@example.org,Low,Resolved,3721,3.21,26297.48
+C5591CA3,10/22/2024,10/23/2024,Billing,Asia Pacific,Jennifer Ochoa,Chelsea Curry,flynngary@example.net,Medium,Resolved,2145,2.07,896.28
+9E3CF374,10/23/2024,10/23/2024,Billing,North America,Nicholas Barnes,Gary Silva,karenvincent@example.net,Critical,Resolved,1041,2.23,6632.22
+69322F86,10/24/2024,10/25/2024,Operations,North America,Benjamin Adams,Kevin Merritt,valeriebaker@example.net,Critical,Resolved,2327,2.31,31506.52
+A04FAB2A,10/25/2024,,Billing,North America,Melissa Contreras,Gina White,williamslaurie@example.org,Medium,Unresolved,,,17559.36
+0FC66D01,10/26/2024,,Customer Support,Middle East,Lauren Morris,Crystal Cole,nicoleball@example.net,Critical,Unresolved,,,39910.36
+D9F5267D,10/26/2024,,Sales,North America,Brandi Luna,Victor Martinez,kristy10@example.com,Low,Unresolved,,,32274.31
+3005C29D,10/26/2024,,Sales,North America,Kathy Neal,Alexis Thompson,andersonjames@example.com,Low,Unresolved,,,17355.73
+CDC457FC,10/27/2024,10/29/2024,Billing,Europe,Matthew Clark,Joanna Decker,bushdanielle@example.org,High,Resolved,4156,1.51,33543.46
+8E959153,10/27/2024,10/29/2024,Customer Support,North America,Judith Rogers,Eric Mccarthy,zbarnes@example.net,High,Resolved,3236,4.92,21409.64
+80B3B79A,10/27/2024,10/29/2024,Sales,Middle East,Daniel Barber,Brittany Berg,danielwilson@example.net,Low,Resolved,4075,1.63,12376.97
+20563350,10/28/2024,10/28/2024,Technical Support,Middle East,George Campbell,Christopher Thomas,mark35@example.org,Critical,Resolved,424,1.85,1354.73
+FA2945FB,10/28/2024,10/29/2024,Technical Support,Asia Pacific,Stacey Roach,Hannah Lopez,hcastillo@example.org,Medium,Resolved,1618,2.01,16350.89
+82C54D63,10/30/2024,,Technical Support,Asia Pacific,Javier Frazier,Jessica Martin,thomasstephanie@example.net,Critical,Unresolved,,,7721.98
+6B4DB73A,10/31/2024,10/31/2024,Billing,Europe,Larry Marsh,Austin Macias,browngeorge@example.net,Medium,Resolved,818,4.91,1966.17
+DCB65D58,10/31/2024,,Operations,North America,Brian Maxwell,Austin Rios,stevenserika@example.net,Medium,Unresolved,,,42116.67
+6F06FE1B,11/2/2024,11/4/2024,Sales,Asia Pacific,Beth Anderson,Amanda Ferguson,bentleycraig@example.com,Low,Resolved,3527,4.59,46871.84
+FECD24D0,11/3/2024,11/4/2024,Technical Support,Asia Pacific,Jody Roberts,Kara Jones,amandamills@example.org,Critical,Resolved,2258,1.14,19292.22
+FE519F4E,11/3/2024,11/4/2024,Customer Support,Middle East,Brian Ortiz,Janice Jones,vgreen@example.org,Critical,Resolved,1487,3.25,41211.09
+61A11C35,11/5/2024,,Customer Support,Asia Pacific,Sara Hayes,Justin Serrano,davistheresa@example.org,Low,Unresolved,,,26859.31
+AD900D59,11/5/2024,,Technical Support,Middle East,Gabriella Walters,Hayden Ross,michaelgibbs@example.org,High,Unresolved,,,16808.12
+94766C08,11/7/2024,11/7/2024,Operations,Europe,Patrick Stone,Jeffery Sanchez,bmcdonald@example.net,High,Resolved,120,4.52,40528.87
+D66876B1,11/7/2024,11/7/2024,Sales,Africa,Sharon Hurley,Sandra Baker,timothyhill@example.org,High,Resolved,924,2.94,44650.69
+F18AA160,11/7/2024,11/9/2024,Billing,Africa,Kelly Adams,Andrea Hernandez,jordanjeffrey@example.com,Critical,Resolved,4165,2.63,44423.54
+1AE9CE38,11/8/2024,11/9/2024,Sales,North America,Robert Cooper,Cody Koch,david96@example.org,High,Resolved,2836,3.41,1460.4
+1A2D5692,11/9/2024,11/9/2024,Operations,Africa,Jacob Pope,Steven Patterson,carpentererica@example.net,High,Resolved,38,4.59,33687.1
+63ADC67E,11/9/2024,11/11/2024,Technical Support,Asia Pacific,Courtney Barnett,Summer Martinez,schroederrachel@example.org,Medium,Resolved,3479,1.8,20081.04
+07F37847,11/9/2024,11/11/2024,Billing,Africa,Danielle Graham PhD,Robert Fletcher,esmith@example.com,Critical,Resolved,3588,4.69,36285.5
+D56F28D4,11/11/2024,11/13/2024,Customer Support,Middle East,Carmen Lopez,Lindsey Dominguez,padilladebra@example.net,Low,Resolved,3997,4.3,2383.37
+5013B4C2,11/11/2024,,Billing,Middle East,Dr. Micheal Cardenas MD,Alexandra Espinoza,jacksonpamela@example.com,Critical,Unresolved,,,12175.52
+9686BF71,11/12/2024,11/13/2024,Operations,Europe,James Higgins,Nicole Stone,salazarjohn@example.org,High,Resolved,1544,2.57,16890.71
+5C4B9186,11/13/2024,,Sales,North America,Kelsey Strickland,Mitchell Cole,phillip43@example.net,Medium,Unresolved,,,3771.63
+03391BF1,11/15/2024,11/15/2024,Technical Support,Middle East,Emily Howard,Bethany York,garygonzalez@example.net,Critical,Resolved,646,2.14,47961.04
+0535C54C,11/15/2024,11/17/2024,Customer Support,Africa,Kimberly Gallagher,Christina Shah,suzanne21@example.org,High,Resolved,3137,3.38,37071.88
+ED53E698,11/16/2024,11/16/2024,Operations,Europe,Andrew Weber,Kevin Ortega,robertwilliams@example.net,Medium,Resolved,641,1.81,29648.13
+81A871CD,11/16/2024,11/16/2024,Customer Support,North America,Justin Rosales,James Chapman,laceybrown@example.net,High,Resolved,615,3.18,40817.12
+5DFDE685,11/17/2024,11/19/2024,Sales,Europe,Erica Sanders,Charles Davis,richardrandolph@example.org,Critical,Resolved,3060,1.87,22802.48
+519C65AC,11/17/2024,11/19/2024,Billing,Asia Pacific,Norman Harris,Christopher Gallagher,alexjackson@example.org,Medium,Resolved,4300,3.53,42761.54
+9BE3492D,11/18/2024,,Customer Support,Europe,Brian Jones,Kristen Simmons,eric77@example.net,Critical,Unresolved,,,24572.94
+C26FC5E4,11/19/2024,11/19/2024,Customer Support,Europe,Gina Neal,Andrew Martin,hernandeznicole@example.org,Medium,Resolved,399,3.1,28680.46
+21296561,11/19/2024,,Operations,Europe,Rachel Martinez,David Ellis,ashleygriffith@example.com,Critical,Unresolved,,,7033.3
+E893C0AA,11/20/2024,11/22/2024,Sales,Middle East,Frank Hall,Karen Fuller,vjones@example.org,Low,Resolved,4228,1.15,42218.05
+EE13462F,11/20/2024,11/22/2024,Customer Support,Middle East,Matthew Winters,Patricia Thomas,richardsondarryl@example.com,High,Resolved,3443,4.49,40227.87
+3AA4A92A,11/21/2024,,Customer Support,Asia Pacific,Amanda Rhodes,Teresa Ramirez,monique65@example.com,Critical,Unresolved,,,3302.72
+7C076E25,11/21/2024,11/22/2024,Billing,Middle East,Joseph Gray,Mrs. Nancy Barron,michaelholland@example.com,Low,Resolved,1808,3.02,28899.2
+C42E9CB6,11/22/2024,11/23/2024,Billing,Asia Pacific,Jonathan Farrell,Alexandra Olsen,burnsjulie@example.org,Low,Resolved,2478,4.72,23833.99
+CC98DCA3,11/23/2024,,Customer Support,Middle East,Robert Becker,Sonia Gardner,harrisoncarlos@example.com,Low,Unresolved,,,21623.42
+53EE91A0,11/24/2024,11/26/2024,Billing,North America,Michelle Parker,Richard Martinez,robin30@example.com,Medium,Resolved,4018,2.43,38937.81
+167125B0,11/26/2024,11/26/2024,Technical Support,Asia Pacific,Deborah Crane,Nancy Bradley,lcampbell@example.org,Low,Resolved,175,4.96,21193.44
+9818337,11/26/2024,11/27/2024,Technical Support,Asia Pacific,John Johns,Amy White,davismatthew@example.org,Medium,Resolved,1845,1.08,2922.22
+56484A8B,11/27/2024,11/28/2024,Operations,Africa,Timothy Williams DDS,Nicholas Goodwin,padams@example.org,High,Resolved,1873,1.93,13888.46
+7896BF99,11/27/2024,,Technical Support,Africa,Joshua Ford,Clinton Moore,rhondacoleman@example.org,High,Unresolved,,,41404.49
+72E4BD2A,11/28/2024,11/28/2024,Customer Support,Europe,April Willis,Lisa Clay,bakermeghan@example.org,Medium,Resolved,676,3.68,8061.63
+DD3A6985,11/30/2024,12/1/2024,Operations,Africa,Rachael Young,Kari Robinson,benjamin90@example.net,Low,Resolved,2639,3.58,41853.61
+88C5896F,11/30/2024,12/2/2024,Operations,Europe,James Wright,Patrick Oconnor,leonardedward@example.org,Low,Resolved,4068,4.08,47829.63
+2000A918,12/1/2024,,Billing,Europe,Jesse Long,Jessica Mills,ronniemiranda@example.org,Low,Unresolved,,,43755.12
+3A173DBF,12/1/2024,,Sales,Asia Pacific,Cody Christian,Justin Nelson DDS,ftaylor@example.org,Medium,Unresolved,,,7320.56
+145A340B,12/1/2024,12/1/2024,Operations,Asia Pacific,Steven Brown,Misty Jackson,jamiemitchell@example.org,Medium,Resolved,566,2.67,6657.06
+871F51D3,12/2/2024,12/4/2024,Customer Support,Asia Pacific,Ashlee Frank,Robert Trujillo,knightrobert@example.org,Critical,Resolved,4089,3.82,24914.11
+F35C743A,12/3/2024,12/4/2024,Sales,Africa,Rebecca Jackson,Joy Bowers,laurie66@example.org,Low,Resolved,2330,3.35,36525.74
+44CEDAEC,12/3/2024,12/3/2024,Sales,Asia Pacific,Ronald Carr,Meghan Porter,laura36@example.net,High,Resolved,427,1.21,36380.28
+5DB1B871,12/4/2024,12/4/2024,Sales,Africa,Lawrence Patterson,Ryan Quinn,tthomas@example.com,High,Resolved,325,1.5,23840.73
+914C90D0,12/4/2024,,Operations,Middle East,Gregory Owens,Kimberly Horton,aaronrodriguez@example.com,Low,Unresolved,,,26334.51
+AB848482,12/5/2024,,Billing,Middle East,Kevin Campbell,Peter Young,shelbyfowler@example.org,Medium,Unresolved,,,13955.85
+4572AC47,12/5/2024,12/7/2024,Billing,Asia Pacific,Hannah Alvarez,Paula Chapman,nicholas49@example.com,Low,Resolved,3038,3.62,7211.82
+C0E2C54D,12/6/2024,12/6/2024,Billing,Africa,Leah Ewing,Victor Miller,rosedaniel@example.org,High,Resolved,935,2.88,17377.39
+FBF629CD,12/6/2024,12/7/2024,Customer Support,Africa,Danielle Williamson,Elizabeth Morris,dlee@example.com,Medium,Resolved,2518,2.22,23330.78
+D8826D5B,12/7/2024,12/9/2024,Billing,Asia Pacific,Patrick Price,Sandra Brooks,jameskim@example.org,Medium,Resolved,2903,2.51,22858.25
+D7758D26,12/7/2024,12/7/2024,Sales,Europe,Robin Alvarez,Rachel Harris,laurapatterson@example.net,Medium,Resolved,778,1.21,34155.14
+C6A267D3,12/9/2024,12/10/2024,Technical Support,Middle East,Miranda Ruiz,Edward Ingram,dennis23@example.com,Critical,Resolved,1605,3.93,46460.91
+9F2F7CD1,12/9/2024,,Technical Support,Africa,Elizabeth Daugherty,Jason Cook,maxwellsmith@example.org,Critical,Unresolved,,,17832.89
+44E9B3A2,12/9/2024,,Operations,Africa,Jesse Hart,Jonathan Davis,michaellogan@example.com,Medium,Unresolved,,,46732.25
+C6AE6724,12/11/2024,12/12/2024,Operations,Middle East,Frank Shepherd,Antonio Ross,vcolon@example.net,Medium,Resolved,2583,3.03,9729.28
+7924AE49,12/11/2024,12/12/2024,Operations,Middle East,Judy Rosales,Luke Compton,tharris@example.com,High,Resolved,1526,2.33,8799.54
+7B5F39F1,12/11/2024,,Operations,Europe,Stephanie Collier,Darren Turner,lisa71@example.org,Medium,Unresolved,,,18429.53
+53B18368,12/13/2024,12/13/2024,Billing,Asia Pacific,Alan Williams,Casey Poole,bdunn@example.com,Low,Resolved,814,4.67,36207.33
+C36823BB,12/14/2024,12/15/2024,Operations,Asia Pacific,Linda Russo,Thomas Freeman,albert98@example.net,Critical,Resolved,1952,1.58,49388.84
+75948586,12/14/2024,12/14/2024,Sales,North America,Scott Lozano,Melissa Phillips,dustinwebster@example.net,Critical,Resolved,206,2.19,45792.07
+E089EFC7,12/14/2024,12/14/2024,Customer Support,Europe,Christina Martin,Mark Wilson MD,xspencer@example.net,High,Resolved,1429,4.45,10217.94
+7F16A0D2,12/14/2024,12/14/2024,Sales,Asia Pacific,Douglas Johnson,Karen Long,hannahgriffith@example.com,Critical,Resolved,656,3.94,16002.58
+0D477918,12/14/2024,12/16/2024,Customer Support,Asia Pacific,Laura Brown,Christine Hernandez,brittney50@example.net,Medium,Resolved,2927,4.4,9075.49
+4C44024C,12/14/2024,12/14/2024,Billing,Middle East,Stephanie Morgan,Matthew Jarvis,herreramary@example.net,High,Resolved,1327,3.95,40284.66
+68EDD292,12/15/2024,12/17/2024,Operations,Africa,Ann Jennings,Samuel Carter,mgillespie@example.com,Low,Resolved,3024,2.22,46577.16
+83D0ECE9,12/15/2024,12/15/2024,Customer Support,Africa,Craig Foster,Janice Washington,richardaustin@example.net,Medium,Resolved,844,2.81,30435.47
+0E027464,12/15/2024,12/16/2024,Sales,North America,Jason Hall,Justin Holmes,jeffreylopez@example.net,High,Resolved,1929,4.75,26249.15
+7BF00D58,12/16/2024,12/17/2024,Customer Support,Asia Pacific,Mary Stevens,Sheena Wilson,mmiller@example.com,Critical,Resolved,1930,2.54,10819.89
+E4DA9221,12/16/2024,12/18/2024,Billing,Africa,Dana Rodriguez,Caleb Robinson,benjamin40@example.com,Medium,Resolved,3924,4.23,48882.04
+D9247EB5,12/16/2024,12/16/2024,Billing,North America,Joseph Vega,Robert Gill,carrillosydney@example.org,Critical,Resolved,897,3.76,28146.32
+A7E230F5,12/17/2024,,Operations,Europe,Jennifer Swanson,Sergio Shannon,smithmary@example.net,Critical,Unresolved,,,33672.48
+88DE731E,12/19/2024,,Sales,Middle East,Marcus Hoover,Elizabeth Vargas,wbridges@example.com,High,Unresolved,,,11815.75
+A5FA910D,12/19/2024,,Technical Support,Europe,Tammy Nguyen,Brandon Roberson,elizabeth99@example.com,High,Unresolved,,,30077.69
+44C7BB72,12/19/2024,12/21/2024,Sales,Africa,Jeffrey Williamson,Linda Neal,hansenlarry@example.org,High,Resolved,3061,1.27,43984.2
+E132488A,12/23/2024,,Operations,Africa,Johnny Freeman,Andrea Snyder,ericfernandez@example.net,Critical,Unresolved,,,26740.08
+FE9C3D4F,12/24/2024,12/24/2024,Customer Support,Europe,Heather Morales,Heather Martinez,lindsayalvarez@example.net,Critical,Resolved,1143,3.31,2150.69
+0864E9F4,12/24/2024,12/25/2024,Customer Support,Middle East,Pamela Webb,Kathleen Hicks,agraham@example.com,Medium,Resolved,2318,4.65,24689.77
+2.40E+289,12/25/2024,12/25/2024,Operations,Middle East,Eric Mcclure,Cindy Rojas,mmontoya@example.com,High,Resolved,1188,3.31,28848.46
+77728,12/26/2024,12/27/2024,Sales,Middle East,Amber Massey,Valerie Meadows,anitajones@example.net,Critical,Resolved,1989,2.49,45282.59
+4BAC79F8,12/27/2024,,Sales,Asia Pacific,Abigail Peterson,Tracy Cain,danielmathis@example.com,Low,Unresolved,,,47717.13
+FCB2A482,12/27/2024,,Billing,North America,Benjamin Martinez,Kevin Haley,felicia31@example.org,Medium,Unresolved,,,4749.64
+5466BA9B,12/27/2024,12/28/2024,Sales,Middle East,Michael Townsend,Julia Ross,jasminfranklin@example.com,Critical,Resolved,2687,2.77,40871.08
+6450DA9B,12/27/2024,12/29/2024,Customer Support,Europe,Richard Rose,Sandra Austin,jennifer36@example.org,Low,Resolved,3416,4.28,6448.59
+EF13ED53,12/27/2024,12/28/2024,Operations,Africa,Paul Simmons PhD,David Gardner,julia18@example.org,Medium,Resolved,2460,2.93,8520.83
+E16DF3B4,12/29/2024,12/30/2024,Customer Support,North America,Erik Phillips,Nicole Scott,clee@example.com,Critical,Resolved,2468,3.14,44431.76
+92428983,12/29/2024,12/31/2024,Sales,Africa,Matthew Ortega,Michael Padilla,carneyanthony@example.org,Critical,Resolved,4307,2.11,18933.03
+CD80C150,12/30/2024,1/1/2025,Sales,Middle East,Olivia Yu,Philip Macdonald,kdavis@example.com,Medium,Resolved,3828,2.67,10868.62
