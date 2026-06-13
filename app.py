@@ -1,12 +1,17 @@
 import streamlit as st
 import pandas as pd
 from utils.load_data import load_data
-from utils.metrics import kpi_display
+from utils.schema_detection import detect_schema
+from utils.business_schema import infer_business_schema
+from utils.schema_resolution import resolve_schema
+from utils.Kpi_Registry import calculate_kpis
+from utils.ui import display_kpis
 import plotly.express as px
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import MinMaxScaler
+from utils.isolation_model import run_isolation_forest, plot_anomalies
 
-#set page orientation
+# set page orientation
 st.set_page_config(layout="wide")
 
 # set background color
@@ -16,68 +21,153 @@ st.markdown("""<style> .stApp {background-color : cadetblue}""", unsafe_allow_ht
 st.markdown(
     "<h1 style= 'text-align: center;  color: darkslategray;'> Operational Insights Dashboard with Automatic KPI Monitoring </h1>",
             unsafe_allow_html=True)
-# Load table
-df = load_data("data/operational_data.csv")
-deparments = sorted(df["department"].dropna().unique())
-regions = sorted(df["region"].unique())
-priorities = sorted(df["priority"].unique())
-statuses = sorted(df["status"].dropna().unique())
 
+# upload your file
+uploaded_file = st.sidebar.file_uploader(
+    "upload your file (csv, xlsx)",
+    type= ["csv", "xlsx"]
+)
+# use uploaded dataset if available
+if uploaded_file is not None:
+    df = load_data(uploaded_file)
 
-with st.sidebar:
-    st.header("Dashboard Filters")
-    selected_departments = st.multiselect(
-        "Select a department", deparments, default=deparments)
+    st.sidebar.success("Custom dataset loaded successfully!")
 
-    selected_regions = st.multiselect("Select a region", regions, default= regions)
+# Fallback to default dataset
+else:
+    df = load_data("data/operational_data.csv")
 
-    selected_status = st.multiselect("Select a status", statuses, default= statuses) 
+    st.sidebar.info("Using default operational dataset.")
 
-    selected_priority = st.multiselect("Select a priority", priorities, default= priorities)
+ 
+# detect and select column types
+schema = detect_schema(df)
 
-filtered_df = df[
-    (df["department"].isin(selected_departments)&
-     df["region"].isin(selected_regions)&
-     df["status"].isin(selected_status)&
-     df["priority"].isin(selected_priority))
-]
+numeric_columns = schema["numeric"]
+categorical_columns = schema["categorical"]
+datetime_columns = schema["datetime"]
+bool_columns = schema["boolean"]
+
+# Display selected column
+with st.expander("Detected Dataset Schema"):
+
+    st.write("#### Numeric Columns")
+    if numeric_columns:
+        st.write(numeric_columns)
+    else:
+        st.info("No numeric columns detected")
+
+    st.write("#### Categorical Columns")
+    if categorical_columns:
+        st.write(categorical_columns)
+    else:
+        st.info("No categorical columns detected")
+
+    st.write("#### Datetime Columns")
+    if datetime_columns:
+        st.write(datetime_columns)
+    else:
+        st.info("No datetime columns detected")
+
+    st.write("#### boolean Columns")
+    if bool_columns:
+        st.write(bool_columns)
+    else:
+        st.info("no bool columns detected")
+
+selected_category = st.sidebar.multiselect(
+        "Select a Category",
+        categorical_columns,
+        default= categorical_columns[:3]
+)
+
+filtered_df = df.copy()
+
+for col in selected_category:
+    options = sorted(
+        filtered_df[col]
+        .dropna()
+        .unique()
+        .tolist()
+    )
+
+    selected_values = st.sidebar.multiselect(
+        f"filter {col}",
+        options,
+        default= options
+    )
+
+    filtered_df = filtered_df[
+        filtered_df[col]
+        .isin(selected_values)
+    ]
+
 if filtered_df.empty:
     st.warning("no data to display")
     st.stop()
 
-# using a container show number f rws and columns and first 5 rows of data
+if datetime_columns:
+    for col in datetime_columns:
+        filtered_df[col] = pd.to_datetime(
+            filtered_df[col],
+            errors="coerce"
+        )
+
 data_peek = st.container()
 
 with data_peek:
     row = filtered_df.shape[0]
     column = filtered_df.shape[1]
-    col1, col2= st.columns([3, 3])
-    col1.metric("rows", row)
-    col2.metric("columns", column)
+    col1, col2, col3= st.columns(3)
+    col1.metric("rows", row, border= True)
+    col3.metric("columns", column, border= True)
     st.dataframe(filtered_df.head(5))
 
-kpis = kpi_display(filtered_df)
+business_schema, dimension_schema = infer_business_schema(filtered_df)
+resolved_business_schema = resolve_schema(business_schema)
 
-st.markdown(
-    "<h3 style= 'text-align: center;  color: darkslategray;'> KPIs Summary </h3>",
-            unsafe_allow_html=True)
+kpis = calculate_kpis(filtered_df, resolved_business_schema)
 
-col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,2])
-col1.metric("Total Tickets", kpis["Total Tickets"])
-col2.metric("Resolved", kpis["Resolved"])
-col3.metric("Resolution Rate", f"{round(kpis["Resolved percentage"], 2)}%")
-col4.metric("Avg Response", round(kpis["Avg Response"], 2))
-col5.metric("Satisfaction", round(kpis["Avg Satisfaction"], 2))
-col6.metric("Revenue", f"${kpis["Total Revenue"]:,.2f}" )
+display_kpis(kpis)
+with st.expander("Business Schema Detection"):
+    st.write(business_schema)
 
+status_col = resolved_business_schema.get("status")
+revenue_col = resolved_business_schema.get("revenue")
+response_col = resolved_business_schema.get("response")
+satisfaction_col = resolved_business_schema.get("satisfaction")
+
+
+dimension_mapping = {}
+
+for concept, candidates in dimension_schema.items():
+
+    if len(candidates) == 1:
+
+        dimension_mapping[concept] = candidates[0]
+
+    elif len(candidates) > 1:
+
+        dimension_mapping[concept] = st.sidebar.selectbox(
+            f"{concept.title()} Column",
+            candidates
+        )
+
+department_col = dimension_mapping.get("department")
+date_col = dimension_mapping.get("date")
+region_col = dimension_mapping.get("region")
+priority_col = dimension_mapping.get("priority")
+
+with st.expander("Dimension Schema Detection"):
+    st.write(dimension_schema)
 
 fig = px.pie(
-    filtered_df["status"], 
-    names= "status", color= "status", color_discrete_map= {"Resolved": "blues", "Unresolved": "coral"}, 
-    labels="status")
+    filtered_df[status_col], 
+    names= status_col, color= status_col, color_discrete_map= {"Resolved": "blues", "Unresolved": "coral"}, 
+    labels= status_col)
 fig.update_layout(height= 300)
 
-df2 = filtered_df["department"].value_counts().reset_index()
+df2 = filtered_df[department_col].value_counts().reset_index()
 df2.columns = ["department", "counts"]
 sorted_df2 = df2.sort_values("counts", ascending=False)
 fig2 = px.bar(sorted_df2, x="department", y="counts", color= "counts",
@@ -87,7 +177,8 @@ fig2.update_layout(height= 300,
                   yaxis_title="tickets",
                   font=dict(size=10))
 
-df3 = filtered_df[["region", "revenue_impact"]].groupby("region").sum().reset_index()
+
+df3 = filtered_df[[region_col, revenue_col]].groupby(region_col).sum().reset_index()
 df3.columns = ["regions", "revenue"]
 sort_df3 = df3.sort_values("revenue", ascending=False)
 fig3 = px.bar(sort_df3, x= "regions", y= "revenue", color= "revenue", color_continuous_scale="thermal")
@@ -114,8 +205,8 @@ with col10:
     st.plotly_chart(fig3, width="stretch")
 
 st.subheader("Operational Impact per Department")
-filtered_df["month"] = filtered_df["date_raised"].dt.to_period("M").dt.to_timestamp()
-df4 = filtered_df.groupby(["month", "department"]).size().reset_index()
+filtered_df["month"] = filtered_df[date_col].dt.to_period("M").dt.to_timestamp()
+df4 = filtered_df.groupby(["month", department_col]).size().reset_index()
 df4.columns = ["month_raised", "department", "ticket_count"]
 sort_df4 = df4.sort_values("month_raised", ascending=False)
 fig4 = px.line(sort_df4, x= "month_raised", y= "ticket_count", color= "department", markers=True)
@@ -131,7 +222,7 @@ st.plotly_chart(fig4)
 st.subheader("Avg Response Time per Department & Region")
 col11, col12 = st.columns(2)
 
-df5_1 = filtered_df.groupby(["month", "region"])["response_time_minutes"].mean().reset_index()
+df5_1 = filtered_df.groupby(["month", region_col])[response_col].mean().reset_index()
 df5_1.columns = ["month", "region", "average_response"]
 df5_1 = df5_1.sort_values("month", ascending=False)
 fig5_1 = px.line(df5_1, x = "month", y ="average_response", color="region", markers=True)
@@ -142,7 +233,7 @@ fig5_1.update_layout(height= 300,
 fig5_1.update_traces(hovertemplate= "region: %{fullData.name} <br> month: %{x} average_response: %{y:.2f} <extra></extra>",
                    line_shape="spline")
 
-df5_2 = filtered_df.groupby(["month", "department"])["response_time_minutes"].mean().reset_index()
+df5_2 = filtered_df.groupby(["month", department_col])[response_col].mean().reset_index()
 df5_2.columns = ["month", "department", "average_res"]
 df5_2 = df5_2.sort_values("month", ascending=False)
 fig5_2 = px.line(df5_2, x = "month", y ="average_res", color="department", markers=True)
@@ -164,7 +255,7 @@ with col12:
 # Average customer satisfaction by department
 df6_1 = (
     filtered_df
-    .groupby("department")["customer_satisfaction_score"]
+    .groupby(department_col)[satisfaction_col]
     .mean()
     .reset_index()
 )
@@ -201,7 +292,7 @@ fig6_1.update_traces(
 # SATISFACTION BY PRIORITY
 df6_2 = (
     filtered_df
-    .groupby("priority")["customer_satisfaction_score"]
+    .groupby(priority_col)[satisfaction_col]
     .mean()
     .reset_index()
 )
@@ -254,17 +345,16 @@ with col14:
     st.subheader("Priority satisfaction chart")
     st.plotly_chart(fig6_2, width="stretch")
 
-
 aggregated_table = (filtered_df.groupby
                 ("month")
-                 [["response_time_minutes", "customer_satisfaction_score"]].mean().reset_index())
+                 [[response_col, satisfaction_col]].mean().reset_index())
 aggregated_table.columns = ["month","avg_response", "avg_satisfaction"]
 
 temp_selected = (filtered_df.groupby
                 ("month")
-                 ["revenue_impact"].sum()
+                 [revenue_col].sum()
                  .reset_index()
-                 .rename(columns={"revenue_impact": "total_revenue"}))
+                 .rename(columns={revenue_col: "total_revenue"}))
 aggregated_table = aggregated_table.merge(
     temp_selected,
     on="month",
@@ -287,85 +377,7 @@ aggregated_table = aggregated_table.merge(
 for col in aggregated_table.columns:
     if aggregated_table[col].dtype in ["float64", "float32", "int64"]:
         aggregated_table[col] = aggregated_table[col].round(2) 
-st.dataframe(aggregated_table)
-
-
-def run_isolation_forest(data, features, contamination):
-    # select trainning data.
-    trainning_data = data[features]
-
-    # scale the data
-    scaler = MinMaxScaler()
-    scaled_data = scaler.fit_transform(trainning_data)
-
-    # initialise the model
-    model = IsolationForest(
-        n_estimators= 100,
-        contamination= contamination,
-        random_state= 42
-    )
-    
-    model.fit(scaled_data) # train the model
-
-    output_data = data.copy()  # Create copy to avoid modifying original dataframe
-    
-    output_data["anomaly"] = model.predict(scaled_data)
-    output_data["anomaly_score"] = model.decision_function(scaled_data)
-    output_data["anomaly_value"] = output_data["anomaly"].map({1: "Normal", -1: "Anomaly"})
-
-    return output_data
-
-def plot_anomalies(
-        data,
-        x_col,
-        y_col,
-        title,
-        height=400
-):
-
-    # Main trend line
-    fig = px.line(
-        data,
-        x=x_col,
-        y=y_col,
-        title=title,
-        markers=True
-    )
-
-    # Smooth line
-    fig.update_traces(line_shape="spline")
-
-    # Select anomalies only
-    anomalies_only = data[
-        data["anomaly"] == -1
-    ]
-
-    # Add anomaly markers
-    fig.add_scatter(
-        x=anomalies_only[x_col],
-        y=anomalies_only[y_col],
-        mode="markers",
-        marker=dict(size=12, symbol="x"),
-        name="Detected Anomaly"
-    )
-
-    # Layout improvements
-    fig.update_layout(
-        height=height,
-        xaxis_title=x_col,
-        yaxis_title=y_col,
-        hovermode="x unified"
-    )
-
-    # Custom hover
-    fig.update_traces(
-        hovertemplate=
-        f"{x_col}: %{{x}}<br>"
-        f"{y_col}: %{{y:.2f}}"
-        "<extra></extra>"
-    )
-
-    return fig
+st.dataframe(aggregated_table.head(5))
 
 features = [
     "avg_response",
@@ -374,8 +386,7 @@ features = [
     "total_tickets"
 ]
 
-
-aggregated_table = run_isolation_forest(
+predicted_table = run_isolation_forest(
     aggregated_table,
     features,
     0.001
@@ -384,11 +395,11 @@ aggregated_table = run_isolation_forest(
 
 st.subheader("AI-Powered KPI Monitoring")
 
-st.dataframe(aggregated_table)
+st.dataframe(predicted_table.head(5))
 
 
 fig_anomaly = plot_anomalies(
-    data=aggregated_table,
+    data=predicted_table,
     x_col="month",
     y_col="avg_response",
     title="Operational Response Time Anomaly Detection"
@@ -399,8 +410,8 @@ st.plotly_chart(
 )
 
 anomaly_count = len(
-    aggregated_table[
-        aggregated_table["anomaly"] == -1
+    predicted_table[
+        predicted_table["anomaly"] == -1
     ]
 )
 
