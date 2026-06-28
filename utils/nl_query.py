@@ -123,5 +123,5 @@ def execute_query(
             f"({answer[metric_col]:,.2f})"
         )
     
-    return result.sort_values()
+    return result.sort_values(dimension_col)
 
