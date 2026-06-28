@@ -24,7 +24,7 @@ def display_kpis(kpis):
 
     kpi_items = list(kpis.items())
 
-    cols_per_row = 3
+    cols_per_row = 2
 
     for i in range(0, len(kpi_items), cols_per_row):
 
@@ -45,5 +45,5 @@ def display_kpis(kpis):
             col.metric(
                 label,
                 display_value,
-                border=True
+                border=True,
             )

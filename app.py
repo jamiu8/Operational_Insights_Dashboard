@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 from utils.load_data import load_data
 from utils.schema_detection import detect_schema
+from utils.data_quality import missing_values_report, duplicate_report, high_cardinality_report, constant_columns_report
 from utils.business_schema import infer_business_schema
 from utils.schema_resolution import resolve_schema
 from utils.Kpi_Registry import calculate_kpis
 from utils.ui import display_kpis
+from utils.nl_query import parse_query, execute_query
 import plotly.express as px
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import MinMaxScaler
@@ -48,38 +50,41 @@ categorical_columns = schema["categorical"]
 datetime_columns = schema["datetime"]
 bool_columns = schema["boolean"]
 
+container = st.container()
+
+with container:
 # Display selected column
-with st.expander("Detected Dataset Schema"):
+    with st.expander("Detected Dataset Schema"):
 
-    st.write("#### Numeric Columns")
-    if numeric_columns:
-        st.write(numeric_columns)
-    else:
-        st.info("No numeric columns detected")
+        st.write("#### Numeric Columns")
+        if numeric_columns:
+            st.write(numeric_columns)
+        else:
+            st.info("No numeric columns detected")
 
-    st.write("#### Categorical Columns")
-    if categorical_columns:
-        st.write(categorical_columns)
-    else:
-        st.info("No categorical columns detected")
+        st.write("#### Categorical Columns")
+        if categorical_columns:
+            st.write(categorical_columns)
+        else:
+            st.info("No categorical columns detected")
 
-    st.write("#### Datetime Columns")
-    if datetime_columns:
-        st.write(datetime_columns)
-    else:
-        st.info("No datetime columns detected")
+        st.write("#### Datetime Columns")
+        if datetime_columns:
+            st.write(datetime_columns)
+        else:
+            st.info("No datetime columns detected")
 
-    st.write("#### boolean Columns")
-    if bool_columns:
-        st.write(bool_columns)
-    else:
-        st.info("no bool columns detected")
+        st.write("#### boolean Columns")
+        if bool_columns:
+            st.write(bool_columns)
+        else:
+            st.info("no bool columns detected")
 
-selected_category = st.sidebar.multiselect(
-        "Select a Category",
-        categorical_columns,
-        default= categorical_columns[:3]
-)
+    selected_category = st.sidebar.multiselect(
+            "Select a Category",
+            categorical_columns,
+            default= categorical_columns[:3]
+    )
 
 filtered_df = df.copy()
 
@@ -113,6 +118,41 @@ if datetime_columns:
             errors="coerce"
         )
 
+null_counts = missing_values_report(filtered_df)
+duplicates = duplicate_report(filtered_df)
+cardinality = high_cardinality_report(filtered_df, categorical_columns)
+const_columns = constant_columns_report(filtered_df)
+
+
+with container:
+    with st.expander("Null_Count report"):
+        if null_counts.empty:
+            st.success("No missing values detected")
+        else:
+            st.dataframe(null_counts)
+            st.write(F"There are {null_counts["Null_values"].sum()} null values in total")
+
+    with st.expander("Duplicated rows"):
+        if duplicates.empty:
+            st.success("No Duplicate Row Found")
+        else:
+            st.dataframe(duplicates)
+            st.write(F"There are {duplicates["ticket_id"].count()} duplicated rows in total")
+
+    with st.expander("Cardinality Report"):
+        if cardinality.empty:
+            st.success("There are no High Cardinal Rows")
+        else:
+            st.dataframe(cardinality)
+            st.write(F"There are {cardinality["Unique_Values"].count()} columns with high cardinality")
+
+    with st.expander("Constant Columns"):
+        if const_columns.empty:
+            st.success("There are no Constant Columns")
+        else:
+            st.dataframe(const_columns)
+            st.write(F"There are {const_columns["Columns"].count()} Constant columns")
+
 data_peek = st.container()
 
 with data_peek:
@@ -128,9 +168,15 @@ resolved_business_schema = resolve_schema(business_schema)
 
 kpis = calculate_kpis(filtered_df, resolved_business_schema)
 
+st.markdown(
+    "<h3 style= 'text-align: center;  color: gainsboro;'> KPIs</h1>",
+            unsafe_allow_html=True)
+
 display_kpis(kpis)
-with st.expander("Business Schema Detection"):
-    st.write(business_schema)
+
+with container:
+    with st.expander("Business Schema Detection"):
+        st.write(business_schema)
 
 status_col = resolved_business_schema.get("status")
 revenue_col = resolved_business_schema.get("revenue")
@@ -158,8 +204,28 @@ date_col = dimension_mapping.get("date")
 region_col = dimension_mapping.get("region")
 priority_col = dimension_mapping.get("priority")
 
-with st.expander("Dimension Schema Detection"):
-    st.write(dimension_schema)
+with container:
+    with st.expander("Dimension Schema Detection"):
+        st.write(dimension_schema)
+
+
+st.markdown(
+    "<h3 style= 'text-align: center;  color: gainsboro;'> Inquiry into your Dataset</h1>",
+            unsafe_allow_html=True)
+
+st.subheader("Ask Your Dataset")
+
+queried = st.text_input("Enter Query relevant to the Dataset (use schema detection above for keywords)")
+
+if st.button("analyze"):
+    parsed = parse_query(queried, resolved_business_schema, dimension_schema)
+    answer = execute_query(parsed, filtered_df, resolved_business_schema, dimension_schema)
+    st.write(answer)
+    
+
+st.markdown(
+    "<h3 style= 'text-align: center;  color: gainsboro;'> Charts and Analysis</h1>",
+            unsafe_allow_html=True)
 
 fig = px.pie(
     filtered_df[status_col], 
@@ -245,13 +311,15 @@ fig5_2.update_traces(hovertemplate= "department: %{fullData.name} <br> month: %{
                    line_shape="spline")
 
 with col11:
-    st.subheader("Avg Response time (region)")
+    st.subheader("Region")
     st.plotly_chart(fig5_1, width="stretch")
 
 with col12:
-    st.subheader("Avg Response time (department)")
+    st.subheader("Department")
     st.plotly_chart(fig5_2, width="stretch")
 
+# Satisfaction impact charts
+st.subheader("Avg Satisfaction per Department & Priority")
 # Average customer satisfaction by department
 df6_1 = (
     filtered_df
@@ -338,11 +406,11 @@ fig6_2.update_traces(
 col13, col14 = st.columns(2)
 
 with col13:
-    st.subheader("Department satisfaction chart")
+    st.subheader("Department")
     st.plotly_chart(fig6_1, width="stretch")
 
 with col14:
-    st.subheader("Priority satisfaction chart")
+    st.subheader("Priority")
     st.plotly_chart(fig6_2, width="stretch")
 
 aggregated_table = (filtered_df.groupby
@@ -377,7 +445,6 @@ aggregated_table = aggregated_table.merge(
 for col in aggregated_table.columns:
     if aggregated_table[col].dtype in ["float64", "float32", "int64"]:
         aggregated_table[col] = aggregated_table[col].round(2) 
-st.dataframe(aggregated_table.head(5))
 
 features = [
     "avg_response",
@@ -393,8 +460,11 @@ predicted_table = run_isolation_forest(
 )
 
 
-st.subheader("AI-Powered KPI Monitoring")
+st.markdown(
+    "<h3 style= 'text-align: center;  color: gainsboro;'> KPIs Anomalies Overview</h1>",
+            unsafe_allow_html=True)
 
+st.subheader("Anomaly Detection Table Results")
 st.dataframe(predicted_table.head(5))
 
 
@@ -418,3 +488,4 @@ anomaly_count = len(
 st.warning(
     f"{anomaly_count} anomalous operational periods detected."
 )
+

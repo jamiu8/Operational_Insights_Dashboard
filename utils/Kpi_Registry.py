@@ -1,10 +1,6 @@
 import pandas as pd
 
 
-def total_records(data, schema):
-    return len(data)
-
-
 def total_revenue(data, schema):
 
     revenue_col = schema.get("revenue")
@@ -68,10 +64,6 @@ def resolution_rate(data, schema):
 
 
 KPI_REGISTRY = {
-    "Total Records": {
-        "function": total_records,
-        "format": "integer"
-    },
 
     "Total Revenue Impact": {
         "function": total_revenue,
