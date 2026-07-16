@@ -7,7 +7,8 @@ from utils.business_schema import infer_business_schema
 from utils.schema_resolution import resolve_schema
 from utils.Kpi_Registry import calculate_kpis
 from utils.ui import display_kpis
-from utils.nl_query import parse_query, execute_query
+from utils import nl_query
+from datetime import datetime, timedelta
 import plotly.express as px
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import MinMaxScaler
@@ -217,9 +218,9 @@ st.subheader("Ask Your Dataset")
 
 queried = st.text_input("Enter Query relevant to the Dataset (use schema detection above for keywords)")
 
+engine = nl_query.QueryEngine(filtered_df, resolved_business_schema, dimension_schema, datetime_columns)
 if st.button("analyze"):
-    parsed = parse_query(queried, resolved_business_schema, dimension_schema)
-    answer = execute_query(parsed, filtered_df, resolved_business_schema, dimension_schema)
+    answer = engine.ask(queried)
     st.write(answer)
     
 
