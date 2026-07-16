@@ -87,8 +87,10 @@ with container:
             default= categorical_columns[:3]
     )
 
+# copy the dataset to prevent changing the original data
 filtered_df = df.copy()
 
+# selecting the relevant columns to be used for analysis, multiple columns supported
 for col in selected_category:
     options = sorted(
         filtered_df[col]
@@ -112,6 +114,7 @@ if filtered_df.empty:
     st.warning("no data to display")
     st.stop()
 
+# to convert the datetime columns selected to date_time data type.
 if datetime_columns:
     for col in datetime_columns:
         filtered_df[col] = pd.to_datetime(
@@ -119,13 +122,13 @@ if datetime_columns:
             errors="coerce"
         )
 
-null_counts = missing_values_report(filtered_df)
-duplicates = duplicate_report(filtered_df)
-cardinality = high_cardinality_report(filtered_df, categorical_columns)
-const_columns = constant_columns_report(filtered_df)
+null_counts = missing_values_report(filtered_df) # to detect null values
+duplicates = duplicate_report(filtered_df) # to detect duplicates
+cardinality = high_cardinality_report(filtered_df, categorical_columns) # to present acardinality report of the data
+const_columns = constant_columns_report(filtered_df) # to show columns that have contant values
 
 
-with container:
+with container: # display for schema information using the container at the top of the code
     with st.expander("Null_Count report"):
         if null_counts.empty:
             st.success("No missing values detected")
@@ -154,31 +157,33 @@ with container:
             st.dataframe(const_columns)
             st.write(F"There are {const_columns["Columns"].count()} Constant columns")
 
-data_peek = st.container()
+data_peek = st.container() # a new container 
 
-with data_peek:
-    row = filtered_df.shape[0]
-    column = filtered_df.shape[1]
+with data_peek: # container is used to shed more info about the dataset
+    row = filtered_df.shape[0] # for number of rows
+    column = filtered_df.shape[1] # for number of columns
     col1, col2, col3= st.columns(3)
+    # display the number of rows and columns
     col1.metric("rows", row, border= True)
     col3.metric("columns", column, border= True)
-    st.dataframe(filtered_df.head(5))
+    st.dataframe(filtered_df.head(5)) # display five rows of the dataset
 
-business_schema, dimension_schema = infer_business_schema(filtered_df)
-resolved_business_schema = resolve_schema(business_schema)
+business_schema, dimension_schema = infer_business_schema(filtered_df) # to automatically detect all the relevant columns
+resolved_business_schema = resolve_schema(business_schema)# for the selection of only one metric column per field
 
-kpis = calculate_kpis(filtered_df, resolved_business_schema)
+kpis = calculate_kpis(filtered_df, resolved_business_schema)# automatically calculate the relevant business kpis
 
 st.markdown(
     "<h3 style= 'text-align: center;  color: gainsboro;'> KPIs</h1>",
-            unsafe_allow_html=True)
+            unsafe_allow_html=True) 
 
-display_kpis(kpis)
+display_kpis(kpis) # display all kpis
 
-with container:
+with container: # use container above to show all metrics columns detected for ease of queries
     with st.expander("Business Schema Detection"):
         st.write(business_schema)
 
+# assign each column detected into a variable
 status_col = resolved_business_schema.get("status")
 revenue_col = resolved_business_schema.get("revenue")
 response_col = resolved_business_schema.get("response")
@@ -187,7 +192,7 @@ satisfaction_col = resolved_business_schema.get("satisfaction")
 
 dimension_mapping = {}
 
-for concept, candidates in dimension_schema.items():
+for concept, candidates in dimension_schema.items(): # to allow for flexibility in the use of dimension columns detected
 
     if len(candidates) == 1:
 
@@ -200,12 +205,13 @@ for concept, candidates in dimension_schema.items():
             candidates
         )
 
+# assign all dimension columns pcked into a variable
 department_col = dimension_mapping.get("department")
 date_col = dimension_mapping.get("date")
 region_col = dimension_mapping.get("region")
 priority_col = dimension_mapping.get("priority")
 
-with container:
+with container: # display active dimension columns 
     with st.expander("Dimension Schema Detection"):
         st.write(dimension_schema)
 
@@ -216,8 +222,10 @@ st.markdown(
 
 st.subheader("Ask Your Dataset")
 
+# stores the query inputed by user
 queried = st.text_input("Enter Query relevant to the Dataset (use schema detection above for keywords)")
 
+# uses the query stored for quick inquiry into the dataet
 engine = nl_query.QueryEngine(filtered_df, resolved_business_schema, dimension_schema, datetime_columns)
 if st.button("analyze"):
     answer = engine.ask(queried)
@@ -228,6 +236,7 @@ st.markdown(
     "<h3 style= 'text-align: center;  color: gainsboro;'> Charts and Analysis</h1>",
             unsafe_allow_html=True)
 
+# plots business relevant chart quickly upon importing data
 fig = px.pie(
     filtered_df[status_col], 
     names= status_col, color= status_col, color_discrete_map= {"Resolved": "blues", "Unresolved": "coral"}, 
@@ -414,6 +423,8 @@ with col14:
     st.subheader("Priority")
     st.plotly_chart(fig6_2, width="stretch")
 
+# aggregates table to perform machine learning analysis on the data. 
+# this is to create a month column to shorten the size of the data
 aggregated_table = (filtered_df.groupby
                 ("month")
                  [[response_col, satisfaction_col]].mean().reset_index())
@@ -436,17 +447,19 @@ temp_selected2 = (filtered_df.groupby
 
 temp_selected2.columns = ["month", "total_tickets"]
 
-
+# merge the two agregated tables together into one table
 aggregated_table = aggregated_table.merge(
     temp_selected2,
     on="month",
     how="left"
 )
 
+# round up float values in the newly aggregated table
 for col in aggregated_table.columns:
     if aggregated_table[col].dtype in ["float64", "float32", "int64"]:
         aggregated_table[col] = aggregated_table[col].round(2) 
 
+# selected features for the model
 features = [
     "avg_response",
     "avg_satisfaction",
@@ -454,6 +467,7 @@ features = [
     "total_tickets"
 ]
 
+# trainning the model
 predicted_table = run_isolation_forest(
     aggregated_table,
     features,
@@ -465,10 +479,11 @@ st.markdown(
     "<h3 style= 'text-align: center;  color: gainsboro;'> KPIs Anomalies Overview</h1>",
             unsafe_allow_html=True)
 
+
 st.subheader("Anomaly Detection Table Results")
-st.dataframe(predicted_table.head(5))
+st.dataframe(predicted_table.head(5)) # display the aggregated table
 
-
+# plot the model results
 fig_anomaly = plot_anomalies(
     data=predicted_table,
     x_col="month",
@@ -486,6 +501,7 @@ anomaly_count = len(
     ]
 )
 
+# display warnings for anomalies in the data.
 st.warning(
     f"{anomaly_count} anomalous operational periods detected."
 )
